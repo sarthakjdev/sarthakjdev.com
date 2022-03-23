@@ -1,4 +1,4 @@
-export default function ProjectSection(){
+export default function ProjectSection({project}){
     return (
         <section>
             

@@ -1,18 +1,18 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-import AboutSection from '../src/components/about/about'
+import ProjectSection from '../../src/components/projects/projectSection'
 
 
-export default function ProjectDetail(){
+export default function ProjectDetail({ project }){
 
-    const router = useRouter({ props })
+    const router = useRouter()
     const { projectId } = router.query
     return(
             <>
                 <Head>
-                <title> { projectId } | Sarthak Jain</title>
+                <title> { projectId.toUpperCase() } | Sarthak Jain</title>
                 </Head>
-                <AboutSection />
+                <ProjectSection project={project}/>
             </>
     )
 }
@@ -20,7 +20,7 @@ export default function ProjectDetail(){
 export async function getServerSideProps(){
     return {
         props: {
-
+            project: 'we are good to go'
         }
     }
 }

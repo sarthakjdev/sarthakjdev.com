@@ -3,14 +3,17 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './src/components/**/*.{js,ts,jsx,tsx}', './sections/**/*.{js,ts,jsx,tsx}'],
+  content: ['./pages/**/*.{js,ts,jsx,tsx}', './src/components/**/*.{js,ts,jsx,tsx}', './sections/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       colors: {
-        mainbg: '#FEFBEA',
+        mainbg: '#0A0F21',
         primary: '#7A5BE8',
         primary2: '#E76EC7',
         secondary: '#D45915',
+        aboutBg: `rgb(209, 194, 194, 0.1)`,
+        bgShade: '#396CEE',
+        cardBorder: '#877979'
       },
       typography: {
         DEAFAULT: {
@@ -56,6 +59,12 @@ module.exports = {
       },
       maxHeight: {
         '30': '7rem'
+      },
+      blur: {
+        full: '300px'
+      },
+      rotate: {
+        '360': '360deg'
       },
       screens: {
         '2xl': {'max': '1535px'},

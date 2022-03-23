@@ -6,26 +6,25 @@
 
  import Link from "next/link"
  import Image from "next/image"
+
+ import Button from '../button'
+
  import logo from '../../../public/images/logo.svg'
  
  const pages = [
+     {
+         name: 'Home',
+         link: '/'
+     },
      { 
          name: 'About', 
          link: '/about'
      },
      { 
-         name: 'Contact', 
-         link: '/contact'
-     },
-     { 
          name: 'Projects', 
          link: '/projects'
      },
-     { 
-         name: 'Experience', 
-         link: '/experience'
-     },
- 
+
  ]
  
  function toggleNavbar() {
@@ -65,7 +64,7 @@
  
          {/* Navbar menu */}
         <nav className="flex items-center justify-evenly ">
-        <div className=" navbar flex items-center justify-evenly transition-all duration-200 lg:-translate-x-full lg:flex-col lg:w-full lg:h-90vh lg:absolute lg:top-20 lg:left-0 lg:right-0 lg:bg-main-bg lg:mt-8 lg:z-100">
+        <div className=" navbar flex items-center justify-evenly transition-all duration-200 lg:-translate-x-full lg:flex-col lg:w-full lg:h-90vh lg:absolute lg:top-20 lg:left-0 lg:right-0 lg:bg-mainbg lg:mt-8 lg:z-100">
             {
                 pages.map((page)=>{
                  return (
@@ -73,6 +72,8 @@
                  )
                 })
             }
+
+            <Button url={"/contact"} name='contact' />
        </div>
  
        {/* ham toggle button for responsive view */}

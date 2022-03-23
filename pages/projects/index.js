@@ -1,15 +1,15 @@
 import Head from 'next/head'
 
-import AboutSection from '../src/components/pro/about'
+import ProjectSection from '../../src/components/projects/project'
 
 
-export default function About(){
+export default function Projects(){
     return(
             <>
                 <Head>
-                <title>About | CrossKnot Hacks</title>
+                <title>Projects | CrossKnot Hacks</title>
                 </Head>
-                <AboutSection />
+                <ProjectSection />
             </>
     )
 }

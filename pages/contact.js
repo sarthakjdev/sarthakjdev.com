@@ -5,7 +5,7 @@ export default function Contact(){
     return(
             <>
                 <Head>
-                <title>Contact | CrossKnot Hacks</title>
+                <title>Contact | Sarthak Jain - Portfolio</title>
                 </Head>
                 <ContactSection />
             </>
