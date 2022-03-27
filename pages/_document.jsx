@@ -7,7 +7,7 @@ export default class CustomDocument extends Document {
             <Head>
 
                 {/* primary meta tags  */}
-{/* 
+                {/* 
                 <meta name="title" content="Crossknot Hacks" />
                 <meta name="description" content="CrossKnot hacks is a 36 hours an interactive coding event to bring developers and other interested people together to improve upon or build a new software program." />
                 <meta name="keywords" content="HTML, CSS, JavaScript, crossknot, crossknot, hacks, hackathon, crossknot hacks, prizes, collaboration , create, creativity, carnival, celeberation, winter, beginning of year" />

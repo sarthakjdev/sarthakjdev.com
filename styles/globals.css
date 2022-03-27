@@ -23,8 +23,12 @@ a {
 }
 
 .outline-text {
-  -webkit-text-stroke: 0.5px white;
+  -webkit-text-stroke: 0.4px white;
+  -webkit-text-color: transparent;
+  -webkit-animation: right 10s linear infinite;
+  width: fit-content;
    color: transparent;
+
 }
 
 .outline-text-bold {
