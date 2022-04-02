@@ -1,10 +1,7 @@
 import { Formik, Form, useFormik } from "formik"
 import * as Yup from 'yup'
-import { useRouter } from "next/router"
-
+import sendMail from "../../services/mailer"
 export default function ContactForm(){
-
-    const router = useRouter()
     
     const validationSchema = Yup.object({
         name: Yup.string().required('name is required'),
@@ -22,6 +19,9 @@ export default function ContactForm(){
             description: ''
         }, 
         validationSchema: validationSchema,
+        onSubmit:async  (values)=>{
+            await sendMail(values)
+        }
     })
 
     return (
