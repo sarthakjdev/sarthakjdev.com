@@ -66,6 +66,18 @@ module.exports = {
       rotate: {
         '360': '360deg'
       },
+      keyframes: {
+        slide: {
+         '0%': { transform: 'translate(0 , 0)' },
+         '100%': { transform: 'translate(-100% , 0)'}
+        }
+      },
+      animation: {
+        'slide': 'slide 50s linear infinite' 
+      },
+      paddingLeft: {
+        full: '100%'
+      },
       screens: {
         '2xl': {'max': '1535px'},
         // => @media (max-width: 1535px) { ... }

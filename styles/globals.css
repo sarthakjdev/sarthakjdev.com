@@ -15,6 +15,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-color: #0A0F21;
+  overflow-x: hidden;
 }
 
 a {
@@ -25,7 +26,6 @@ a {
 .outline-text {
   -webkit-text-stroke: 0.4px white;
   -webkit-text-color: transparent;
-  -webkit-animation: right 10s linear infinite;
   width: fit-content;
    color: transparent;
 

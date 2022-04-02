@@ -8,7 +8,7 @@ export default function AboutSection(){
                 {
                     aboutData.map((about)=>{
                         return(
-                            <p key={about.name} className='text-lg p-6 my-10 rounded-lg border-2 border-cardBorder text-center bg-aboutBg'>{about.description}</p>
+                            <p key={about.name} className='text-lg p-6 my-10 leading-8 tracking-wider rounded-lg border-2 border-cardBorder text-center bg-aboutBg'>{about.description}</p>
                         )
                     })
                 }

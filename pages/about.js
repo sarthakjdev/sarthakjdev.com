@@ -8,10 +8,9 @@ export default function About(){
     return(
             <>
                 <Head>
-                <title>About | CrossKnot Hacks</title>
+                <title>About | Sarthak Jain</title>
                 </Head>
                 <section className='mx-20 mt-10 relative md:mx-10'>
-                {/* <BgShadeBall className='absolute z-100' /> */}
                 <AboutSection />
                 <TechStackSection />
                 </section>

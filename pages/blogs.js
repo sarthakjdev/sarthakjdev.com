@@ -5,9 +5,9 @@ export default function Contact(){
     return(
             <>
                 <Head>
-                <title>Contact | Sarthak Jain</title>
+                <title>Blogs | Sarthak Jain </title>
                 </Head>
-                <ContactSection />
+                
             </>
     )
 }
