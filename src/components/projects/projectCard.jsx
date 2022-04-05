@@ -1,11 +1,13 @@
 import Image from "next/image"
 import Link from "next/link"
-
+import { useRouter } from "next/router"
 import projectGithub from '../../../public/images/project/project-github.svg'
 import link from '../../../public/images/project/link.svg'
 import heaxagon from '../../../public/images/tech/inner_hexa.svg'
 
 export default function ProjectCard({project}){
+    const router = useRouter()
+
     return(
         <article className="flex flex-col relative items-center justify-center text-white border-2 border-cardBorder p-10 rounded-2xl gap-10 bg-aboutBg">
             <div className="absolute -top-16 -left-10 "> 
@@ -28,7 +30,7 @@ export default function ProjectCard({project}){
                 </div>
             <div className="flex items-center justify-around ml-auto gap-6 sm:m-auto sm:gap-4">
                 <Link href={project.github}><a  target="_blank"><Image src={projectGithub} alt="github" /></a></Link>
-                <Link href={`projects/${project.query}`}><a target="_blank"><Image src={link} alt="link" /></a></Link>
+                <Link href={{pathname: `/${router.pathname}/[slug]`, query: {slug: project.query} }} passHref><a target="_blank"><Image src={link} alt="link" /></a></Link>
             </div>
             </div>
         </article>

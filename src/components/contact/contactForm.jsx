@@ -44,7 +44,7 @@ export default function ContactForm(){
             </div>
             
             <div className="flex flex-col items-center justify-center relative group">
-            <input id="description" className="border-primary border-2 rounded-3xl h-12 w-full px-4  absolute top-0 left-0 right-0 bottom-0 bg-transparent peer" name="description" type="description" onChange={formik.handleChange} value={formik.values.description} />
+            <textarea id="description" className="border-primary border-2 rounded-3xl h-24 w-full px-4  absolute top-0 left-0 right-0 bottom-0 bg-transparent peer" name="description" type="description" onChange={formik.handleChange} value={formik.values.description} />
             <label htmlFor="description" className="uppercase text-text_grey tracking-widest text-center absolute top-2 mt-1 left-6 right-0 bottom-0 mr-auto w-fit peer-focus:hidden">description</label>
             </div>
 

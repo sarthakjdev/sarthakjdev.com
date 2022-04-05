@@ -5,6 +5,8 @@ import figmaIcon from '../../public/images/tech/figma.svg'
 import postgresIcon from '../../public/images/tech/postgres.svg'
 import reactIcon from '../../public/images/tech/react.svg'
 import nextIcon from '../../public/images/tech/next.svg'
+import ts from '../../public/images/tech/ts_logo.svg'
+
 
 
 const tech = [
@@ -18,8 +20,12 @@ const tech = [
         url: 'https://nodejs.dev/',
         icon: nodeIcon,
     },
-
-        {
+    {
+        name: 'typescript',
+        url: 'https://www.typescriptlang.org/',
+        icon: ts
+    },
+    {
         name: 'nextjs',
         url: 'https://nextjs.org/',
         icon: nextIcon,
