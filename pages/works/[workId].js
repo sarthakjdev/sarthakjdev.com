@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-import ProjectSection from '../../src/components/projects/projectSection'
+import ProjectSection from '../../src/components/works/workSection'
 
 
 export default function ProjectDetail({ project }){

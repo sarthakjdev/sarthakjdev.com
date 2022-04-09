@@ -8,7 +8,6 @@
  import Image from "next/image"
  import { useRouter } from "next/router"
  import Button from '../button'
-
  import logo from '../../../public/images/logo.svg'
  
  const pages = [
@@ -28,8 +27,9 @@
          name: 'Blogs',
          link: '/blogs'
      }
-
  ]
+
+
  
  function toggleNavbar() {
     const navul = document.querySelector('.navbar')
