@@ -6,7 +6,7 @@
 
  import Link from "next/link"
  import Image from "next/image"
-
+ import { useRouter } from "next/router"
  import Button from '../button'
 
  import logo from '../../../public/images/logo.svg'
@@ -21,8 +21,8 @@
          link: '/about'
      },
      { 
-         name: 'Projects', 
-         link: '/projects'
+         name: 'Works', 
+         link: '/works'
      },
      {
          name: 'Blogs',
@@ -57,7 +57,8 @@
     })
 }
  export default function Header(){
- 
+ const router = useRouter()
+ console.log(router.route)
  return (
         <header className="flex items-center justify-between px-8 py-5 lg:relative">
  
@@ -69,8 +70,9 @@
         <div className=" navbar flex items-center justify-evenly transition-all duration-200 lg:-translate-x-full lg:flex-col lg:w-full lg:h-90vh lg:absolute lg:top-20 lg:left-0 lg:right-0 lg:bg-mainbg lg:mt-8 lg:z-100">
             {
                 pages.map((page)=>{
+                    console.log(page.link)
                  return (
-                     <Link href={page.link} key={page.name}><a className="text-white text-xl font-primary py-2 px-6 hover:rounded-full hover:text-white hover:bg-primary transition-all duration-200 mx-2 lg:my-8 uppercase active:bg-primary active:text-white active:rounded-full">{page.name}</a></Link>
+                     <Link href={page.link} key={page.name}><a className={`text-white text-lg font-primary py-2 px-4 hover:rounded-full hover:text-white hover:bg-primary transition-all duration-200 mx-2 lg:my-8 active:bg-primary active:text-white active:rounded-full ${router.route === page.url? 'bg-primary text-white rounded-full' : null }`}>{page.name}</a></Link>
                  )
                 })
             }

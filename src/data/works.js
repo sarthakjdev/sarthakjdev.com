@@ -38,16 +38,7 @@ const projects = [
         catergory: 'open source & community',
         github: 'https://github.com/crossknot-community/crossknot-hackathon',
         icon: valque,
-        description: 'Single server discord bot application for creating matchmaking queue for valorant game in thediscord server itself.'
-    },
-    {
-        name: 'crossknot api',
-        keywords: ['nodejs', 'next.js','tailwind CSS' ],
-        query: 'valque',
-        catergory: 'open source & community',
-        github: 'https://github.com/crossknot-community/crossknot-api',
-        icon: valque,
-        description: 'Single server discord bot application for creating matchmaking queue for valorant game in thediscord server itself.'
+        description: 'CrossKnot Hacks is a 36 hours an interactive coding event to bring developers and other interested people together to improve upon or build a new software program.'
     },
 ]
 

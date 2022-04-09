@@ -45,18 +45,18 @@ const footerMenu = [
 export default function Footer(){
     return (
         <footer className="flex flex-col bottom-0 justify-around items-center text-white my-6 lg:flex-col lg:my-2 lg:gap-4">
-            <div className="flex items-center justify-around w-full">
-            <h1 className="text-3xl text-center font-bold">Sarthak Jain</h1>
-            <div className="flex items-center justify-around">
-            {
+            <div className="flex items-center justify-around w-full md:flex-col md:gap-4">
+                <h1 className="text-3xl text-center font-bold">Sarthak Jain</h1>
+                <div className="flex items-center justify-around">
+                {
                     footerMenu.map((menu)=>{
                         return (
                             <Link href={menu.path} key={menu.name} ><a className="pl-4">{menu.name}</a></Link>
                             )
                         })
-             }
-            </div>
-            <div className="flex items-center justify-around gap-8">
+                }
+                </div>
+                <div className="flex items-center justify-around gap-8">
                 {
                     socials.map((social)=>{
                         return (
@@ -64,7 +64,7 @@ export default function Footer(){
                             )
                         })
                     }
-            </div>
+                </div>
             </div>
             <p className="text-xl text-center">Copyright@2021 | All Rights Reserved </p>
         </footer>
