@@ -16,7 +16,7 @@ export default function Tweets({tweets}){
     )
 }
 
-export async function getStaticProps(){
+export async function getStaticProps(params){
 
     const twitterResponse = await twitterAxiosClient.get(`users/${configs.TWITTER_USER_ID}/tweets`)
     // const twitterEmbeds  = await Promise.all(
