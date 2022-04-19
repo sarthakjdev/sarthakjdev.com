@@ -9,7 +9,7 @@ export default function TweetsSection({tweets}){
                tweets.map((tw, index)=>{
                 if(index <= 5){
                     return (
-                        <TweetEmbedComp tweet={tw} />
+                        <TweetEmbedComp tweet={tw}  key={tw.id}/>
                     )
                 }
                })
