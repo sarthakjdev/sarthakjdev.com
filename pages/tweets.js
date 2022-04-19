@@ -30,6 +30,6 @@ export async function getStaticProps(){
         props: {
             tweets: twitterResponse.data.data
         },
-        revalidate: 10000
+        revalidate: 3600
     }
 }
