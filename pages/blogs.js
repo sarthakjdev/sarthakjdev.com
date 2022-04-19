@@ -1,12 +1,13 @@
 import Head from 'next/head'
 import ContactSection from '../src/components/contact/contact'
-
+import ComingSoon from '../src/components/comingSoon'
 export default function Contact(){
     return(
             <>
                 <Head>
                 <title>Blogs | Sarthak Jain </title>
                 </Head>
+                <ComingSoon />
                 
             </>
     )
@@ -15,7 +16,7 @@ export default function Contact(){
 export async function getServerSideProps(){
     return {
         props: {
-            blogs: blogs
+            blogs: 'blogs'
         }
     }
 }

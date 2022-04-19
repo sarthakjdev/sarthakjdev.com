@@ -63,7 +63,6 @@
 
  if (typeof window !== "undefined") {
     window.addEventListener('scroll', ()=>{
-        console.log('trigeered')
         if(window.scrollY >=95){
             setnavbarColor(true)
         }else {

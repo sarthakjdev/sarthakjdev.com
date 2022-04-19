@@ -13,7 +13,10 @@ module.exports = {
         secondary: '#D45915',
         aboutBg: `rgb(209, 194, 194, 0.1)`,
         bgShade: '#396CEE',
-        cardBorder: '#877979'
+        cardBorder: '#877979',
+        gradientCol1: '#C7D3FB',
+        gradientCol2: 'rgba(183, 101, 213, 0.8)',
+        gradientCol3: '#D8D8D8'
       },
       typography: {
         DEAFAULT: {

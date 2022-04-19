@@ -4,7 +4,6 @@ import Button from "../button";
 import ProjectHead from "./projectHead"
 import WorkImage from "./workImage";
 export default function ProjectSection({work}){
- console.log("work ", work);
     return (
         <section className="text-white mt-32 flex  flex-col mx-14">
             <div className="flex items-center justify-around">

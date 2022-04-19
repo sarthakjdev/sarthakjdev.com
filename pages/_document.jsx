@@ -6,6 +6,7 @@ export default class CustomDocument extends Document {
           <Html>
             <Head>
 
+
                 {/* primary meta tags  */}
                 {/* 
                 <meta name="title" content="Crossknot Hacks" />
@@ -42,6 +43,7 @@ export default class CustomDocument extends Document {
             
             <body>
                 <Main />
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
             </body>
 
             <NextScript />
