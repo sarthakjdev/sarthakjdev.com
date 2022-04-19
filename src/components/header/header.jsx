@@ -72,7 +72,7 @@
   }
 
  return (
-        <header className={`fixed top-0 bg-mainbg w-full flex items-center justify-between px-8 py-5 lg:relative z-100  ${navbarColor? 'backdrop-blur-xl lg:backdrop-filter-none': null}`}>
+        <header className={`fixed top-0 bg-mainbg w-full flex items-center justify-between px-8 py-5 lg:relative z-100  ${navbarColor? 'backdrop-blur-xl lg:backdrop-filter-none': null} select-none`}>
  
           {/* Logo */}
         <Link href="/"><a><Image src={logo} alt="logo"/></a></Link>
