@@ -3,27 +3,25 @@ import Link from "next/link"
 import { useRouter } from "next/router"
 import projectGithub from '../../../public/images/project/project-github.svg'
 import link from '../../../public/images/project/link.svg'
-import heaxagon from '../../../public/images/tech/inner_hexa.svg'
+
+import WorkImage from "./workImage"
 
 export default function ProjectCard({work}){
     const router = useRouter()
 
     return(
-        <article className="flex flex-col relative items-center justify-center text-white border-2 border-cardBorder p-10 rounded-2xl gap-10 bg-aboutBg">
-            <div className="absolute -top-16 -left-10 "> 
-            <div className="relative">
-            <Image src={heaxagon} alt="hexagon"/>
-            <div className="absolute top-0 bottom-0 left-0 right-0 m-auto flex items-center justify-center"><Image src={work.icon.src} alt={work.name} height={124} width={124} /></div>
-            </div>
+        <article className="flex flex-col relative items-center justify-center text-white border-2 border-cardBorder p-10 rounded-2xl gap-10 bg-aboutBg w-full sm:p-2">
+            <div className="absolute -top-16 -left-10 sm:-top-10"> 
+            <WorkImage work={work} />
             </div>
             <h1 className="text-center uppercase text-xl font-primary">{work.name}</h1>
-            <p className="text-center text-xl px-10">{work.description}</p>
-            <div className="flex w-full flex-wrap">
-                <div className="topics flex justify-around items-center flex-wrap m-auto">
+            <p className="text-center text-xl px-10 sm:px-2 sm:text-sm">{work.description}</p>
+            <div className="flex w-full flex-wrap items-center just">
+                <div className="topics flex justify-around items-center flex-wrap m-auto sm:hidden">
                     {
                         work.keywords.map((topic)=>{
                             return (
-                                <span key={topic} className=" text-center px-4 py-2 rounded-3xl bg-aboutBg m-2" >{topic}</span>
+                                <span key={topic} className=" text-center px-4 py-2 rounded-3xl bg-aboutBg m-2 sm:px-2 sm:y-1 sm:text-sm " >{topic}</span>
                             )
                         })
                     }

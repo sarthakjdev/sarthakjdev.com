@@ -11,3 +11,11 @@ export default function Contact(){
             </>
     )
 }
+
+export async function getServerSideProps(){
+    return {
+        props: {
+            blogs: blogs
+        }
+    }
+}

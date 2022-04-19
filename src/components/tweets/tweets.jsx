@@ -1,7 +1,15 @@
-export default function TweetsSection(){
+import TweetEmbedComp from "./tweetEmbed"
+
+export default function TweetsSection({tweets}){
     return (
-        <section>
-            
+        <section className="text-white">
+           {
+               tweets.map((tw)=>{
+                   return (
+                       <TweetEmbedComp tweet={tw} key={tw.id}/>
+                   )
+               })
+           }
         </section>
     )
 }

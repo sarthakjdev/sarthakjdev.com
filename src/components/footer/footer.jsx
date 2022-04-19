@@ -3,7 +3,7 @@ import Image from "next/image"
 import twitterIcon from '../../../public/images/socials/twitter.svg'
 import githubIcon from '../../../public/images/socials/github.svg'
 import linkedinIcon from '../../../public/images/socials/linkedin.svg'
-
+import path from 'path'
 
 const socials = [
     {
@@ -22,6 +22,7 @@ const socials = [
         icon: linkedinIcon
     },
 ]
+
 
 const footerMenu = [
     {
@@ -42,10 +43,12 @@ const footerMenu = [
     }
 ]
 
+
+
 export default function Footer(){
     return (
-        <footer className="flex flex-col bottom-0 justify-around items-center text-white my-6 lg:flex-col lg:my-2 lg:gap-4">
-            <div className="flex items-center justify-around w-full md:flex-col md:gap-4">
+        <footer className="flex flex-col bottom-0 justify-around items-center text-white mt-6 lg:flex-col lg:my-2 lg:gap-4 w-full bg-mainbg py-4 pb-2 absolute bottom-0">
+            <div className="flex items-center justify-around w-full md:flex-col md:gap-4 pb-4">
                 <h1 className="text-3xl text-center font-bold">Sarthak Jain</h1>
                 <div className="flex items-center justify-around">
                 {

@@ -1,26 +1,29 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import ProjectSection from '../../src/components/works/workSection'
-
+import projectData from '../../src/data/works'
 
 export default function ProjectDetail({ project }){
 
     const router = useRouter()
-    const { projectId } = router.query
+    const {workId}  = router.query
     return(
             <>
                 <Head>
-                <title> { projectId.toUpperCase() } | Sarthak Jain</title>
+                <title> { workId.toUpperCase() } | Sarthak Jain</title>
                 </Head>
-                <ProjectSection project={project}/>
+                <ProjectSection work={project}/>
             </>
     )
 }
 
-export async function getServerSideProps(){
+export async function getServerSideProps(context){
+
+    const project = projectData.filter((p)=>{  if(p.query ==context.query.workId) return p })
+
     return {
         props: {
-            project: 'we are good to go'
+            project: project[0]
         }
     }
 }

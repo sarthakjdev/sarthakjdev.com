@@ -12,3 +12,7 @@ export const twitterAxiosClient = axios.create({
         authorization: `Bearer ${config.TWITTER_API_BEARER_TOKEN}`
     }
 })
+
+export const oEmbedClient = axios.create({
+    baseURL: config.OEMBED_BASE_URL,
+})

@@ -47,6 +47,7 @@ module.exports = {
         '30': '30%',
         '40': '40%',
         '70': '70%',
+        '90': '90%',
         '16rem': '16rem',
         half: '50%',
         quarter_past: '75%'
@@ -63,6 +64,9 @@ module.exports = {
       blur: {
         full: '300px'
       },
+      backdropBlur: {
+        xs: '2px'
+      },
       rotate: {
         '360': '360deg'
       },
@@ -73,10 +77,11 @@ module.exports = {
         }
       },
       animation: {
-        'slide': 'slide 50s linear infinite' 
+        'slide': 'slide 50s linear infinite',
+        'slide-delayed': 'slide 50s 25s linear infinite'
       },
-      paddingLeft: {
-        full: '100%'
+      transitionDelay: {
+        '25000': '1000ms'
       },
       screens: {
         '2xl': {'max': '1535px'},

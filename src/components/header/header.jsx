@@ -9,7 +9,8 @@
  import { useRouter } from "next/router"
  import Button from '../button'
  import logo from '../../../public/images/logo.svg'
- 
+ import { useState } from "react"
+
  const pages = [
      {
          name: 'Home',
@@ -28,7 +29,6 @@
          link: '/blogs'
      }
  ]
-
 
  
  function toggleNavbar() {
@@ -58,19 +58,31 @@
 }
  export default function Header(){
  const router = useRouter()
- console.log(router.route)
+ const [navbarColor, setnavbarColor] = useState(false)
+
+
+ if (typeof window !== "undefined") {
+    window.addEventListener('scroll', ()=>{
+        console.log('trigeered')
+        if(window.scrollY >=95){
+            setnavbarColor(true)
+        }else {
+            setnavbarColor(false)
+        }
+    })
+  }
+
  return (
-        <header className="flex items-center justify-between px-8 py-5 lg:relative">
+        <header className={`fixed top-0 bg-mainbg w-full flex items-center justify-between px-8 py-5 lg:relative z-100  ${navbarColor? 'backdrop-blur-xl lg:backdrop-filter-none': null}`}>
  
           {/* Logo */}
         <Link href="/"><a><Image src={logo} alt="logo"/></a></Link>
  
          {/* Navbar menu */}
         <nav className="flex items-center justify-evenly ">
-        <div className=" navbar flex items-center justify-evenly transition-all duration-200 lg:-translate-x-full lg:flex-col lg:w-full lg:h-90vh lg:absolute lg:top-20 lg:left-0 lg:right-0 lg:bg-mainbg lg:mt-8 lg:z-100">
+        <div className=" navbar flex items-center justify-evenly transition-all duration-200 lg:-translate-x-full lg:flex-col lg:w-full lg:h-90vh lg:absolute lg:top-20 lg:left-0 lg:right-0 bg-mainbg lg:mt-8 lg:z-100">
             {
                 pages.map((page)=>{
-                    console.log(page.link)
                  return (
                      <Link href={page.link} key={page.name}><a className={`text-white text-lg font-primary py-2 px-4 hover:rounded-full hover:text-white hover:bg-primary transition-all duration-200 mx-2 lg:my-8 active:bg-primary active:text-white active:rounded-full ${router.route === page.url? 'bg-primary text-white rounded-full' : null }`}>{page.name}</a></Link>
                  )

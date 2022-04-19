@@ -10,6 +10,9 @@ const dev = {
     TWITTER_API_BEARER_TOKEN: process.env.TWITTER_API_BEARER_TOKEN,
     TWITTER_BASE_URL: process.env.TWITTER_BASE_URL,
     TWITTER_USER_ID: process.env.TWITTER_USER_ID,
+    HASHNODE_PERSONAL_ACCESS_TOKEN: process.env.HASHNODE_PERSONAL_ACCESS_TOKEN,
+    OEMBED_BASE_URL: process.env.OEMBED_BASE_URL ,
+    TWITTER_USERNAME: process.env.TWITTER_USERNAME
 }
 
 const prod = {
@@ -23,6 +26,9 @@ const prod = {
     TWITTER_API_BEARER_TOKEN: process.env.TWITTER_API_BEARER_TOKEN,
     TWITTER_BASE_URL: process.env.TWITTER_BASE_URL,
     TWITTER_USER_ID: process.env.TWITTER_USER_ID,
+    HASHNODE_PERSONAL_ACCESS_TOKEN: process.env.HASHNODE_PERSONAL_ACCESS_TOKEN,
+    OEMBED_BASE_URL: process.env.OEMBED_BASE_URL ,
+    TWITTER_USERNAME: process.env.TWITTER_USERNAME
 }
 
 const configs = process.env.NODE_ENV === 'production' ?  { ...prod} : {...dev}
