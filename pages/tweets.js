@@ -17,11 +17,7 @@ export default function Tweets({tweets}){
 
 export async function getStaticProps(){
 
-    try {
-        const {data} = await twitterAxiosClient.get(`users/${configs.TWITTER_USER_ID}/tweets`)
-    }catch(error){
-        console.log("error ", error);
-    }
+    const {data} = await twitterAxiosClient.get(`users/${configs.TWITTER_USER_ID}/tweets`)
     // const twitterEmbeds  = await Promise.all(
     //         twitterResponse.data.data.map(async (tweet)=>{
     //         const url =  `https://twitter.com/${configs.TWITTER_USERNAME}/status/${tweet.id}`
