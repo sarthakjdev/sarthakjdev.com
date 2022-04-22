@@ -12,7 +12,8 @@ const dev = {
     TWITTER_USER_ID: process.env.TWITTER_USER_ID,
     HASHNODE_PERSONAL_ACCESS_TOKEN: process.env.HASHNODE_PERSONAL_ACCESS_TOKEN,
     OEMBED_BASE_URL: process.env.OEMBED_BASE_URL ,
-    TWITTER_USERNAME: process.env.TWITTER_USERNAME
+    TWITTER_USERNAME: process.env.TWITTER_USERNAME,
+    SERVER_BASE_URL: process.env.SERVER_BASE_URL
 }
 
 const prod = {
@@ -28,7 +29,8 @@ const prod = {
     TWITTER_USER_ID: process.env.TWITTER_USER_ID,
     HASHNODE_PERSONAL_ACCESS_TOKEN: process.env.HASHNODE_PERSONAL_ACCESS_TOKEN,
     OEMBED_BASE_URL: process.env.OEMBED_BASE_URL ,
-    TWITTER_USERNAME: process.env.TWITTER_USERNAME
+    TWITTER_USERNAME: process.env.TWITTER_USERNAME,
+    SERVER_BASE_URL: process.env.SERVER_BASE_URL
 }
 
 const configs = process.env.NODE_ENV === 'production' ?  { ...prod} : {...dev}

@@ -1,5 +1,6 @@
 import axios from "axios"
 import config from '../configs/config.js'
+ console.log("config ", config);
 
 export const AxiosClient = axios.create({
     baseURL: config.SERVER_BASE_URL,

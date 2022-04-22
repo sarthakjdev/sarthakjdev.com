@@ -3,7 +3,6 @@ import TweetsSection from '../src/components/tweets/tweets.jsx'
 import ComingSoon from '../src/components/comingSoon.jsx'
 import { twitterAxiosClient, oEmbedClient } from '../src/utils/axiosClient.js'
 import configs from '../src/configs/config.js'
-import axios from 'axios'
 
 export default function Tweets({tweets}){
     return(
@@ -18,7 +17,11 @@ export default function Tweets({tweets}){
 
 export async function getStaticProps(){
 
-    const twitterResponse = await twitterAxiosClient.get(`users/${configs.TWITTER_USER_ID}/tweets`)
+    try {
+        const {data} = await twitterAxiosClient.get(`users/${configs.TWITTER_USER_ID}/tweets`)
+    }catch(error){
+        console.log("error ", error);
+    }
     // const twitterEmbeds  = await Promise.all(
     //         twitterResponse.data.data.map(async (tweet)=>{
     //         const url =  `https://twitter.com/${configs.TWITTER_USERNAME}/status/${tweet.id}`
@@ -28,7 +31,7 @@ export async function getStaticProps(){
     // )
     return {
         props: {
-            tweets: twitterResponse.data.data
+            tweets: data.data
         },
         revalidate: 3600
     }
