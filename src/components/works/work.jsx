@@ -13,7 +13,6 @@ export default function Project(){
                                         return (
                                             <ProjectCard work={work} key={work.name} />
                                         )
-
                                 })
                             }
             </section>

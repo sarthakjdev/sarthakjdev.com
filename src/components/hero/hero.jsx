@@ -9,7 +9,7 @@ export default function HeroSection(){
                 <h1 className="font-bold text-8xl font-primary md:text-6xl sm:text-2xl text-center"><span>Sarthak</span><span className="outline-text-bold "> Jain</span></h1>
                 <div className="h-full w-full overflow-hidden">
                     <div className="whitespace-nowrap m-auto overflow-hidden absolute block min-w-full h-full ">
-                        <span className="text-6xl my-8 overflow-hidden font-extrabold outline-text whitespace-nowrap inline-block animate-slide h-full ">LEARNER | WEB DEVELOPMENT | FRONTEND | BACKEND | JAVASCRIPT | UI DESIGNING | DISCORD BOT DEVELOPMENT | DEVOPS | SYSTEM DESIGN |  </span>
+                        <span className="text-6xl my-8 overflow-hidden font-extrabold outline-text whitespace-nowrap inline-block animate-slide h-full pl-full">LEARNER | WEB DEVELOPMENT | FRONTEND | BACKEND | JAVASCRIPT | UI DESIGNING | DISCORD BOT DEVELOPMENT | DEVOPS | SYSTEM DESIGN |  </span>
                     </div>
                     <div className="whitespace-nowrap m-auto overflow-hidden absolute block min-w-full h-full">
                         <span className="text-6xl my-8 overflow-hidden font-extrabold outline-text whitespace-nowrap inline-block animate-slide-delayed pl-full h-full">LEARNER | WEB DEVELOPMENT | FRONTEND | BACKEND | JAVASCRIPT | UI DESIGNING | DISCORD BOT DEVELOPMENT | DEVOPS | SYSTEM DESIGN |  </span>

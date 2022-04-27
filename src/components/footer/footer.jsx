@@ -54,7 +54,7 @@ export default function Footer(){
                 {
                     footerMenu.map((menu)=>{
                         return (
-                            <Link href={menu.path} key={menu.name} ><a className="pl-4">{menu.name}</a></Link>
+                            <Link href={menu.path} key={menu.name} ><a className="pl-4 hover:text-primary2">{menu.name}</a></Link>
                             )
                         })
                 }
@@ -63,7 +63,7 @@ export default function Footer(){
                 {
                     socials.map((social)=>{
                         return (
-                            <Link href={social.path} key={social.name} ><a target="_blank" ><Image src={social.icon.src} alt={social.name} height={social.icon.height} width={social.icon.width} /></a></Link>
+                            <Link href={social.path} key={social.name} ><a target="_blank" className="hover:scale-110 transition-all duration-200" ><Image src={social.icon.src} alt={social.name} height={social.icon.height} width={social.icon.width}  /></a></Link>
                             )
                         })
                     }

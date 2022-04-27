@@ -3,7 +3,7 @@ import aboutData from '../../data/about'
 
 export default function AboutSection(){
     return (
-        <section className="text-white my-14 mx-4 sm:mx-auto mt-32">
+        <section className="text-white my-14 mx-4 sm:mx-auto mt-32" data-aos="fade-down">
             <SectionHead sectionName={'about'} />
                 {
                     aboutData.map((about)=>{

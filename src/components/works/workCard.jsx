@@ -8,11 +8,10 @@ import WorkImage from "./workImage"
 
 export default function ProjectCard({work}){
     const router = useRouter()
-
-    return(
-        <article className="flex flex-col relative items-center justify-center text-white border-2 border-cardBorder p-10 rounded-2xl gap-10 bg-aboutBg w-full sm:p-2">
+    return (
+        <article className="flex flex-col relative items-center justify-center text-white border-2 border-cardBorder p-10 rounded-2xl gap-10 bg-aboutBg w-full sm:p-2" data-aos="zoom-in-up">
             <div className="absolute -top-16 -left-10 sm:-top-10"> 
-            <WorkImage work={work} />
+                <WorkImage work={work} />
             </div>
             <h1 className="text-center uppercase text-xl font-primary">{work.name}</h1>
             <p className="text-center text-xl px-10 sm:px-2 sm:text-sm">{work.description}</p>
