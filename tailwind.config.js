@@ -2,6 +2,7 @@ module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
+    './sections/**/*.{js,ts,jsx,tsx}'
   ],
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './src/components/**/*.{js,ts,jsx,tsx}', './sections/**/*.{js,ts,jsx,tsx}'],
   theme: {
@@ -56,7 +57,8 @@ module.exports = {
         quarter_past: '75%'
       },
       height: {
-        '90vh': '90vh'
+        '90vh': '90vh',
+        '70vh': '65vh'
       },
       zIndex: {
         '100': 100

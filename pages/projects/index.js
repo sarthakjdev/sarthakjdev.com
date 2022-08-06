@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-import ProjectSection from '../../src/components/works/work'
+import ProjectSection from '../../src/components/projects/project'
 
 
 export default function Projects(){

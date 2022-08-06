@@ -14,7 +14,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background-color: #0A0F21;
+  background-color: #0a0f21;
   overflow-x: hidden;
 }
 
@@ -27,27 +27,64 @@ a {
   -webkit-text-stroke: 0.4px white;
   -webkit-text-color: transparent;
   width: fit-content;
-   color: transparent;
-
+  color: transparent;
 }
 
 .outline-text-bold {
   -webkit-text-stroke: 4px white;
-   color: transparent;
+  color: transparent;
 }
 
 .pl-full {
   padding-left: 100%;
 }
 
-
 .section-head-outlined {
-  -webkit-text-stroke:1px  #ffffff;
+  -webkit-text-stroke: 1px #ffffff;
+}
+
+/* #main-name-head {
+  font-size: 6em;
+  letter-spacing: 15px;
+  color: #0e3742;
+  width: 100%;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0008);
+  outline: none;
+  animation: animate 5s linear infinite;
+} */
+
+@keyframes animate {
+  0%,
+  18%,
+  20%,
+  50.1%,
+  60%,
+  65.1%,
+  80%,
+  90.1%,
+  92% {
+    color: #0e3742;
+    text-shadow: none;
+  }
+  18.1%,
+  20.1%,
+  30%,
+  50%,
+  60.1%,
+  65%,
+  80.1%,
+  90%,
+  92.1%,
+  100% {
+    color: #fff;
+    text-shadow: 0 10px #03bcf4, 0 0 20px #03bcf4, 0 0 40px #03bcf4,
+      ee 80px #03bcf4, ee 160px #03bcf4;
+  }
 }
 
 @media screen and (max-width: 769px) {
   .outline-text-bold {
     -webkit-text-stroke: 2px white;
-     color: transparent;
+    color: transparent;
   }
 }

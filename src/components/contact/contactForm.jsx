@@ -27,7 +27,7 @@ export default function ContactForm(){
     return (
 
     <section className="flex flex-col items-center justify-center my-20 text-white">
-        <form  className="flex flex-col w-30 lg:w-40 sm:w-full gap-24 sm:gap-x-0" onSubmit={formik.handleSubmit}>
+        <form  className="flex flex-col w-30 lg:w-40 sm:w-full gap-24  sm:gap-x-0" onSubmit={formik.handleSubmit}>
             <div className="flex flex-col items-center justify-center relative group">
             <input autoComplete="off" id="name" className="border-primary border-2 rounded-3xl h-12 w-full  px-4  absolute top-0 left-0 right-0 bottom-0 bg-transparent peer" name="name" type="name" onChange={formik.handleChange} value={formik.values.name} />
             <label htmlFor="name" className="uppercase text-text_grey tracking-widest text-center absolute top-2 mt-1 left-6 right-0 bottom-0 mr-auto w-fit peer-focus:hidden">name</label>

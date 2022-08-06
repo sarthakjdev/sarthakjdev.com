@@ -1,5 +1,6 @@
 import SectionHead from "../sectionHead"
 import aboutData from '../../data/about'
+import Button from "../buttons/button"
 
 export default function AboutSection(){
     return (
@@ -12,6 +13,7 @@ export default function AboutSection(){
                         )
                     })
                 }
+                <Button name={'Download Resume'} url={'https://drive.google.com/file/d/1z8XuB_6QOYoxQKA93WgKYpEoybKLU9Gt/view?usp=sharing'} downloadAllow={true} />
         </section>
     )
 }
