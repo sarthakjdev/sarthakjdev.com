@@ -13,7 +13,9 @@ export default function Project() {
         {projectsData.map((project, index) => {
           {
             if (router.route == "/") {
-              return index < 3 && <ProjectCard project={project} key={project.name} />;
+              // return index < 3 && <ProjectCard project={project} key={project.name} />;
+
+              return
             } else {
               return <ProjectCard project={project} key={project.name} />;
             }

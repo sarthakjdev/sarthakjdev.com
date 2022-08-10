@@ -5,8 +5,9 @@ import Button from "../buttons/projectButton";
 
 export default function ExperienceCard({ experience }) {
   return (
-    <article className="flex flex-col items-center justify-center">
+    <article className="flex items-center justify-evenly w-full">
         <Image src={experience.icon.src} alt={experience.name} height={experience.icon.height} width={experience.icon.width} />
+        <h2 className="text-white font-bold text-3xl w-fit">{experience.name}</h2>
     </article>
   );
 }

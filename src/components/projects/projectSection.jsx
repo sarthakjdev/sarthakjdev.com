@@ -1,6 +1,5 @@
-import Button from "../button"
+import Button from "../buttons/button"
 import ProjectHead from "./projectHead"
-import WorkImage from "./workImage"
 
 export default function ProjectSection({work}){
     return (
