@@ -22,12 +22,12 @@
     },
      { 
          name: 'Works', 
-         link: '/#works'
+         link: '/#projects'
      },
-     {
-         name: 'Blogs',
-         link: '/#blogs'
-     },
+    //  {
+    //      name: 'Blogs',
+    //      link: '/#blogs'
+    //  },
  ]
 
  
@@ -89,7 +89,7 @@
                 })
             }
 
-            <Button url={"#contact"} name='contact' />
+            <Button url={"/#contact"} name='contact' />
        </div>
  
        {/* ham toggle button for responsive view */}

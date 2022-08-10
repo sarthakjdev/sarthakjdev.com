@@ -20,7 +20,7 @@ const projects = [
         query: 'rejoice',
         catergory: 'personal & freelanced',
         github: 'https://github.com/sarthakjdev/rejoice-bot',
-        live: 'https://crossknothacks.co',
+        live: 'https://discord.gg/fYFjvFpqwT',
         icon: discordIcon,
         description: 'Multi-server Discord bot application with multiple utility features implemented using discord.js library and have used PostgreSQL for the data storage. Implemented a unique feature that enables users to create their community profile in order to foster community culture in the industry.', 
         detailed_desc: 'A discord bot that has the following feature Creating a central USER PROFILE of users through the bot, and that profile can be fetched in all the server where the bot is added. This unique feature is implemented to foster the community culture. Welcoming the new user to the servers, with a feature where you can make the welcome message temoprary. Marking people as VIP, so that no one tag them unnecessarily. Ranking mechanism. Creating Star-Boards for most liked messages.'
@@ -31,7 +31,7 @@ const projects = [
         query: 'rejoice',
         catergory: 'personal & freelanced',
         github: 'https://github.com/sarthakjdev/rejoice-bot',
-        live: 'https://crossknothacks.co',
+        live: 'https://discord.gg/fYFjvFpqwT',
         icon: discordIcon,
         description: 'Multi-server Discord bot application with multiple utility features implemented using discord.js library and have used PostgreSQL for the data storage. Implemented a unique feature that enables users to create their community profile in order to foster community culture in the industry.', 
         detailed_desc: 'A discord bot that has the following feature Creating a central USER PROFILE of users through the bot, and that profile can be fetched in all the server where the bot is added. This unique feature is implemented to foster the community culture. Welcoming the new user to the servers, with a feature where you can make the welcome message temoprary. Marking people as VIP, so that no one tag them unnecessarily. Ranking mechanism. Creating Star-Boards for most liked messages.'

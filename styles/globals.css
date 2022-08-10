@@ -88,3 +88,28 @@ a {
     color: transparent;
   }
 }
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #0A0F21;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-image:  linear-gradient(to bottom, #7A5BE8,#E76EC7);
+  border-radius: 1rem;
+  height: 0.5rem;
+  width: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  box-shadow: whitesmoke;
+}

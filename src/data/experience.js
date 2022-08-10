@@ -9,8 +9,7 @@ const experience = [
         github: 'https://github.com/crossknot-community/crossknot-hackathon',
         live: 'https://crossknothacks.co',
         icon: lfxLogo,
-        description: 'CrossKnot Hacks was a 36 hours interactive coding event to bring developers and other interested people together to improve upon or build a new software program.',
-        detailed_desc: 'CrossKnot Hacks was a 36 hours an interactive coding event to bring developers and other interested people together to improve upon or build a new software program. I implemented the whole website code from scratch in next.js along with dynamic data fetchung implementation in the web app. We used netlify to deploy the website. Through this websi, we managed to direct enough traffic to get around 1200+ registration in our hackathon.'
+        description: 'Work alongside the Zowe CLI squad to implement highly upvoted community enhancements for Zowe CLI!  This project will initially focus primarily on enhancements to our popular jobs and files command groups with potential to expand to other areas if time permits. The Zowe CLI has been instrumental in enabling popular distributed tooling to integrate the mainframe platform'
 
     },
 ]

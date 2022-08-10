@@ -7,7 +7,9 @@ import Hexa from "../../../public/images/project/hexa.svg";
 
 export default function ProjectCard({ project }) {
   return (
-    <article className="flex flex-col items-center justify-center">
+    <Link href={`/projects/${project.query}`}>
+      <a >
+      <article className="flex flex-col items-center justify-center">
         <div className="relative">
             <Image src={Hexa} alt={'hexa'} />
             <div className="absolute top-10 right-0 bottom-0 left-0 m-auto">
@@ -22,5 +24,7 @@ export default function ProjectCard({ project }) {
           <Button name={'Github'} url={project.github} />
         </div>
     </article>
+      </a>
+    </Link> 
   );
 }

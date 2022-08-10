@@ -6,11 +6,11 @@ import projectData from '../../src/data/works'
 export default function ProjectDetail({ project }){
 
     const router = useRouter()
-    const {workId}  = router.query
+    const {projectId}  = router.query
     return(
             <>
                 <Head>
-                <title> { workId.toUpperCase() } | Sarthak Jain</title>
+                <title> { projectId.toUpperCase() } | Sarthak Jain</title>
                 </Head>
                 <ProjectSection work={project}/>
             </>

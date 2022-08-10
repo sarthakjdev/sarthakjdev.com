@@ -8,6 +8,7 @@ import TechStackSection from "../src/components/techStack/techStack";
 import ProjectSection from "../src/components/projects/project";
 import BlogSection from "../src/components/blogs/blog";
 import ExperienceSection from "../src/components/experience/index";
+import ContactSection from "../src/components/contact/contact"
 
 export default function Home() {
   const router = useRouter();
@@ -25,7 +26,8 @@ export default function Home() {
         <ExperienceSection />
         <TechStackSection />
         <ProjectSection />
-        <BlogSection />
+        {/* <BlogSection /> */}
+        <ContactSection />
       </main>
     </div>
   );

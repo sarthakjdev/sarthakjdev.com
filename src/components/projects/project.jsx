@@ -7,9 +7,9 @@ import { useRouter } from "next/router";
 export default function Project() {
   const router = useRouter();
   return (
-    <section className="my-20 md:mb-10 mx-20 md:mx-10 gap-y-10 flex flex-col mt-32 lg:my-14 w-full" id="works">
+    <section className="my-20 gap-y-10 flex flex-col mt-32 lg:my-14 w-full m-auto" id="projects">
       <SectionHead sectionName={"Projects"} />
-      <section className="flex justify-evenly md:flex-col md:gap-10 md:mt-4">
+      <section className="flex justify-evenly md:flex-col md:gap-10 md:mt-4 m-auto w-full">
         {projectsData.map((project, index) => {
           {
             if (router.route == "/") {
@@ -22,7 +22,7 @@ export default function Project() {
         {}
       </section>
       {
-                router.route == '/' && <Button url={'/projects#projects'} name={"See More"} />
+                router.route == '/' && <Button url={'/projects'} name={"See More"} />
             }
     </section>
   );
