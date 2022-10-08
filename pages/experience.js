@@ -2,7 +2,6 @@ import Head from 'next/head'
 
 import ExperienceSection from '../src/components/experience/index'
 import BgShadeBall from '../src/components/bgShade'
-import { AxiosClient } from '../src/utils/axiosClient'
 
 export default function About(){
     return(
@@ -15,21 +14,4 @@ export default function About(){
                 </section>
             </>
     )
-}
-
-export async function getServerSideProps(){
-    try {
-        const response = await AxiosClient.post('/experience')
-        return {
-            props: {
-                experiences: response.data
-            }
-        }
-    } catch (error) {
-        return {
-            props: {
-                experiences: []
-            }
-        }
-    }
 }

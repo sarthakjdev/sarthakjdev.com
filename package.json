@@ -9,8 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@dytesdk/react-ui-kit": "^1.32.0",
-    "@dytesdk/react-web-core": "^1.11.0",
     "@emailjs/browser": "^3.5.0",
     "aos": "^3.0.0-beta.6",
     "autoprefixer": "^10.4.2",
