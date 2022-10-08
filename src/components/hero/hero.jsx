@@ -14,7 +14,7 @@ export default function HeroSection(){
                 setmeetingScheduled(true)
             }
         } catch (error) {
-            
+            return
         }
     }
 
