@@ -13,3 +13,20 @@ export default function Projects(){
             </>
     )
 }
+
+export async function getServerSideProps(){
+    try {
+        const response = await AxiosClient.post('/projects')
+        return {
+            props: {
+                experiences: response.data
+            }
+        }
+    } catch (error) {
+        return {
+            props: {
+                experiences: []
+            }
+        }
+    }
+}

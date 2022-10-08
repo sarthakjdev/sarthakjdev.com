@@ -1,13 +1,32 @@
 import BgShadeBall from "../bgShade"
 import Button from "../buttons/button"
+import { DyteButton } from "@dytesdk/react-ui-kit"
+import { AxiosClient } from "../../utils/axiosClient"
+import { useState } from "react"
+import sendMail from "../../services/mailer"
 
 export default function HeroSection(){
+     const [meetingScheduled, setmeetingScheduled] = useState(false)
+    const scheduleMeeeting = async ()=>{
+        try {
+            const response = await AxiosClient.post('/meeting')
+            if(response.status === 200 || response.status < 300 ){
+                setmeetingScheduled(true)
+            }
+        } catch (error) {
+            return
+        }
+    }
+
     return (
         <section className="select-none text-white flex flex-col items-center relative w-full mt-8 lg:m-auto h-70vh justify-center">
             <BgShadeBall alignment={'left'}/>
             <div className="flex flex-col items-center w-full">
                 <h1 className="text-center text-3xl m-auto sm:text-lg">Hey I m</h1>
                 <h1 className="font-bold text-8xl font-primary md:text-6xl sm:text-2xl text-center" id="main-name-head"><span>Sarthak</span><span className="outline-text-bold "> Jain</span></h1>
+                <div className="w-full flex justify-center items-center">
+                    <DyteButton onClick={scheduleMeeeting} size={'xl'}>Schedule a Meeting</DyteButton>
+                </div>
                 <div className=" w-full overflow-hidden">
                     <div className="whitespace-nowrap m-auto overflow-hidden absolute block min-w-full h-full ">
                         <span className="text-6xl my-8 overflow-hidden font-extrabold outline-text whitespace-nowrap inline-block animate-slide h-full pl-full">LEARNER | WEB DEVELOPMENT | FRONTEND | BACKEND | JAVASCRIPT | UI DESIGNING | DISCORD BOT DEVELOPMENT | DEVOPS | SYSTEM DESIGN |  </span>
