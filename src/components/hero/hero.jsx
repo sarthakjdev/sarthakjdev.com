@@ -1,18 +1,13 @@
 import BgShadeBall from "../bgShade"
-import Button from "../buttons/button"
 import { DyteButton } from "@dytesdk/react-ui-kit"
-import { AxiosClient } from "../../utils/axiosClient"
-import { useState } from "react"
-import sendMail from "../../services/mailer"
+import { useRouter } from "next/router"
+import Button from '../buttons/button'
 
 export default function HeroSection(){
-     const [meetingScheduled, setmeetingScheduled] = useState(false)
+    const router = useRouter()
     const scheduleMeeeting = async ()=>{
-        try {
-            const response = await AxiosClient.post('/meeting')
-            if(response.status === 200 || response.status < 300 ){
-                setmeetingScheduled(true)
-            }
+        try {   
+            router.push({pathname: '/meeting'})
         } catch (error) {
             return
         }
@@ -24,8 +19,8 @@ export default function HeroSection(){
             <div className="flex flex-col items-center w-full">
                 <h1 className="text-center text-3xl m-auto sm:text-lg">Hey I m</h1>
                 <h1 className="font-bold text-8xl font-primary md:text-6xl sm:text-2xl text-center" id="main-name-head"><span>Sarthak</span><span className="outline-text-bold "> Jain</span></h1>
-                <div className="w-full flex justify-center items-center">
-                    <DyteButton onClick={scheduleMeeeting} size={'xl'}>Schedule a Meeting</DyteButton>
+                <div className="w-full flex justify-center items-center my-4">
+                    <Button name={'Schedule a Call'} key={'meeting button'} url={'/meeting'} />
                 </div>
                 <div className=" w-full overflow-hidden">
                     <div className="whitespace-nowrap m-auto overflow-hidden absolute block min-w-full h-full ">

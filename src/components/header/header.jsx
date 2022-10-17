@@ -24,10 +24,14 @@
          name: 'Works', 
          link: '/#projects'
      },
-    //  {
-    //      name: 'Blogs',
-    //      link: '/#blogs'
-    //  },
+     {
+         name: 'Blogs',
+         link: 'https://blog.sarthaljdev.com'
+     },
+     {
+        name: 'Meeting',
+        link: '/meeting'
+     }
  ]
 
  
@@ -64,7 +68,6 @@
  if (typeof window !== "undefined") {
     window.addEventListener('scroll', ()=>{
         if(window.scrollY >=80){
-            console.log("code us reached");
             setnavbarColor(true)
         }else {
             setnavbarColor(false)

@@ -47,7 +47,7 @@ const footerMenu = [
 
 export default function Footer(){
     return (
-        <footer className="flex flex-col  justify-around items-center text-white mt-6 lg:flex-col lg:my-2 lg:gap-4 w-full bg-mainbg py-4 pb-2 bottom-0 select-none ">
+        <footer className="flex flex-col justify-around items-center text-white mt-6 lg:flex-col lg:my-2 lg:gap-4 w-full bg-mainbg py-4 pb-2 bottom-0 select-none ">
             <div className="flex items-center justify-around w-full md:flex-col md:gap-4 pb-4">
                 <h1 className="text-3xl text-center font-bold">Sarthak Jain</h1>
                 <div className="flex items-center justify-around">
