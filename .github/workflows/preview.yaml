@@ -1,0 +1,85 @@
+name: Deploy
+
+on:
+    push:
+        branches-ignore:
+            - 'master'
+
+jobs:
+    deploy:
+        timeout-minutes: 15
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2
+
+            - name: User Node.js LTS
+              uses: actions/setup-node@v2
+
+            # cache the node_modules here
+            - name: Cache Dependencies
+              uses: actions/cache@v3
+
+            - name: Install Vercel CLI
+              run: yarn global add vercel@canary
+
+            - name: Install Dependencies
+              run: yarn install --frozen-lockfile
+
+            - name: Build
+              run: yarn run Build
+
+            - name: Trigger Staging Deployment
+              run: |
+                  console.log('triggering Vercel deployment')
+
+            - name: Deployment Success
+              if: ${{ success() }}
+              uses: actions/github-script@v5
+              with:
+                  script: |
+                      const { pullRequestData: data } = await github.rest.repos.listPullRequestsAssociatedWithCommit({
+                            owner: context.repo.owner,
+                            repo: context.repo.repo,
+                            commit_sha: context.payload.after
+                        })
+
+                      if(pullRequestData[0]){
+
+                        console.log(JSON.stringify(pullRequestData))
+
+                         await github.rest.issues.createComment({
+                              issue_number,
+                              owner: context.repo.owner,
+                              repo: context.repo.repo,
+                              body: `#### 🟢  Deployment success:
+                      Deployed Url: ${}`
+                          })
+                      } else {
+                      throw new Error('Pull request data not found')
+                      }
+
+            - name: Deployment Failure
+              if: ${{ failure() }}
+              uses: actions/github-script@v5
+              with:
+                  script: |
+                      const { pullRequestData: data } = await github.rest.repos.listPullRequestsAssociatedWithCommit({
+                            owner: context.repo.owner,
+                            repo: context.repo.repo,
+                            commit_sha: context.payload.after
+                        })
+
+                      console.log(JSON.stringify(pullRequestData))
+
+                      if(pullRequestData[0]){
+                         await github.rest.issues.createComment({
+                              issue_number,
+                              owner: context.repo.owner,
+                              repo: context.repo.repo,
+                              body: `#### ❌ Deployment failed:
+                      `
+                          })
+                      } else {
+                      throw new Error('Pull request data not found')
+                      }

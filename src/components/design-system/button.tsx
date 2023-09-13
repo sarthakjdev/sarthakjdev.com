@@ -2,7 +2,7 @@ import { type FC, type ButtonHTMLAttributes } from 'react'
 import { cva, type VariantProps } from 'class-variance-authority'
 import { twMerge } from 'tailwind-merge'
 
-const classVariants = cva(
+const buttonClassVariants = cva(
 	'inline-flex min-w-max items-center gap-2 flex-shrink-0 dark:ring-offset-gray-900 border border-transparent font-semibold focus:outline-none disabled:shadow-none disabled:cursor-not-allowed disabled:opacity-50',
 	{
 		variants: {
@@ -117,10 +117,10 @@ const classVariants = cva(
 
 interface ButtonProps
 	extends ButtonHTMLAttributes<HTMLButtonElement>,
-		VariantProps<typeof classVariants> {}
+		VariantProps<typeof buttonClassVariants> {}
 
 const Button: FC<ButtonProps> = ({ intent, size, variant, fullWidth, className, ...props }) => {
-	const classes = twMerge(classVariants({ intent, size, variant, fullWidth, className }))
+	const classes = twMerge(buttonClassVariants({ intent, size, variant, fullWidth, className }))
 
 	return <button type="button" className={classes} {...props} />
 }

@@ -6,6 +6,7 @@ import { HiMenuAlt1 } from 'react-icons/hi'
 import { AiOutlineClose } from 'react-icons/ai'
 import Image from 'next/image'
 import Link from 'next/link'
+import Footer from '~/components/footer'
 
 const navigation = [
 	{ name: 'Blogs', href: '#' },
@@ -14,43 +15,43 @@ const navigation = [
 	{ name: 'Company', href: '#' }
 ]
 
-const slidesList = [
-	{
-		title: 'Netflix Jobs',
-		image: '/slides/netflix-jobs.jpg',
-		style: 'z-10 transform scale-[0.67] -translate-x-[4.23px] -translate-y-[105px]'
-	},
-	{
-		title: 'TikTok',
-		image: '/slides/tiktok.png',
-		style: ' z-20 transform scale-[0.77] -translate-x-[27.27px] -translate-y-[70px] translate[0px]'
-	},
-	{
-		title: 'Twitch',
-		image: '/slides/twitch.jpg',
-		style: 'z-30 transform scale-[0.88] -translate-x-[25.24px] -translate-y-[35px] translate[0px]'
-	},
-	{
-		title: 'Hulu',
-		image: '/slides/hulu.png',
-		style: 'z-40 transform scale-100 translate-x-[0px] translate[0px]'
-	},
-	{
-		title: 'Notion',
-		image: '/slides/notion.png',
-		style: 'z-30 transform scale-[0.88] translate-x-[25.24px] -translate-y-[35px] translate[0px]'
-	},
-	{
-		title: 'Target',
-		image: '/slides/target.png',
-		style: 'z-20 transform scale-[0.77] translate-x-[27.27px] -translate-y-[70px] translate[0px]'
-	},
-	{
-		title: 'Nike',
-		image: '/slides/nike.jpg',
-		style: 'z-10 transform scale-[0.67] translate-x-[4.23px] -translate-y-[70px] translate[0px]'
-	}
-]
+// const slidesList = [
+// 	{
+// 		title: 'Netflix Jobs',
+// 		image: '/slides/netflix-jobs.jpg',
+// 		style: 'z-10 transform scale-[0.67] -translate-x-[4.23px] -translate-y-[105px]'
+// 	},
+// 	{
+// 		title: 'TikTok',
+// 		image: '/slides/tiktok.png',
+// 		style: ' z-20 transform scale-[0.77] -translate-x-[27.27px] -translate-y-[70px] translate[0px]'
+// 	},
+// 	{
+// 		title: 'Twitch',
+// 		image: '/slides/twitch.jpg',
+// 		style: 'z-30 transform scale-[0.88] -translate-x-[25.24px] -translate-y-[35px] translate[0px]'
+// 	},
+// 	{
+// 		title: 'Hulu',
+// 		image: '/slides/hulu.png',
+// 		style: 'z-40 transform scale-100 translate-x-[0px] translate[0px]'
+// 	},
+// 	{
+// 		title: 'Notion',
+// 		image: '/slides/notion.png',
+// 		style: 'z-30 transform scale-[0.88] translate-x-[25.24px] -translate-y-[35px] translate[0px]'
+// 	},
+// 	{
+// 		title: 'Target',
+// 		image: '/slides/target.png',
+// 		style: 'z-20 transform scale-[0.77] translate-x-[27.27px] -translate-y-[70px] translate[0px]'
+// 	},
+// 	{
+// 		title: 'Nike',
+// 		image: '/slides/nike.jpg',
+// 		style: 'z-10 transform scale-[0.67] translate-x-[4.23px] -translate-y-[70px] translate[0px]'
+// 	}
+// ]
 
 export default function Home() {
 	return (
@@ -285,7 +286,7 @@ export default function Home() {
 			</section>
 
 			{/* tech skills */}
-			<section>
+			{/* <section>
 				<div className="customers-main border-white92 bg-white98 m-0 flex flex-col items-center justify-center border py-28">
 					<div className="case-studies-box relative -mt-36  mb-16 text-center">
 						<div className="slider-wrapper m-auto flex h-20 items-center justify-between rounded-md bg-white p-4 text-center  shadow-2xl">
@@ -358,7 +359,9 @@ export default function Home() {
 						View Showcase
 					</Link>
 				</div>
-			</section>
+			</section> */}
+
+			<Footer />
 		</main>
 	)
 }

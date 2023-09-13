@@ -1,7 +1,7 @@
 import { clsx } from 'clsx'
 import Image from 'next/image'
 
-const features = [
+const projects = [
 	{
 		name: 'Minimal and thoughtful',
 		description:
@@ -35,7 +35,7 @@ export default function Example() {
 				</div>
 
 				<div className="mt-16 space-y-16">
-					{features.map((feature, featureIdx) => (
+					{projects.map((feature, featureIdx) => (
 						<div
 							key={feature.name}
 							className="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-8"
