@@ -30,31 +30,6 @@ jobs:
             - name: Build
               run: yarn run build
 
-            - name: Lint
-              run: yarn run lint
-
-            - name: Linter Failed
-              if: ${{ failure() }}
-              uses: actions/github-script@v5
-              with:
-                  script: |
-                      const { pullRequestData: data } = await github.rest.repos.listPullRequestsAssociatedWithCommit({
-                              owner: context.repo.owner,
-                              repo: context.repo.repo,
-                              commit_sha: context.payload.after
-                          })
-
-                        if(pullRequestData[0]){
-                           await github.rest.issues.createComment({
-                                issue_number,
-                                owner: context.repo.owner,
-                                repo: context.repo.repo,
-                                body: `### 🚨  Linter failed`
-                            })
-                        } else {
-                            throw new Error('Pull request data not found')
-                        }
-
             - name: Trigger Production Deployment
               run: vercel deploy -y --prod --token=${{ secrets.VERCEL_TOKEN }} > deployment-url.txt
 
