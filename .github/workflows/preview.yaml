@@ -12,6 +12,7 @@ on:
 
 jobs:
     deploy:
+        environment: Preview
         timeout-minutes: 15
         runs-on: ubuntu-latest
         env:
