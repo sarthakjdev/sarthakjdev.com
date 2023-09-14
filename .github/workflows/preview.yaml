@@ -88,13 +88,7 @@ jobs:
                             commit_sha: context.payload.after
                         })
 
-                      console.log(pullRequestData)
-
-                      console.log(context)
-
                       const deploymentUrl = fs.readFileSync(path.resolve(path.resolve(), './deployment-url.txt'), 'utf8')
-
-                      console.log(deploymentUrl)
 
                       if(pullRequestData[0]){
                          await github.rest.issues.createComment({
@@ -118,8 +112,6 @@ jobs:
                             repo: context.repo.repo,
                             commit_sha: context.payload.after
                         })
-
-                      console.log(JSON.stringify(pullRequestData))
 
                       if(pullRequestData[0]){
                          await github.rest.issues.createComment({
