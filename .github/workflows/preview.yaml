@@ -51,6 +51,8 @@ jobs:
                             commit_sha: context.payload.after
                         })
 
+                      console.log(pullRequestData)
+
                       const deploymentUrl = fs.readFileSync(path.resolve(path.resolve(), './deployment-url.txt'), 'utf8')
 
                       if(pullRequestData[0]){
@@ -70,7 +72,7 @@ jobs:
               uses: actions/github-script@v5
               with:
                   script: |
-                      const { pullRequestData: data } = await github.rest.repos.listPullRequestsAssociatedWithCommit({
+                      const { data: pullRequestData } = await github.rest.repos.listPullRequestsAssociatedWithCommit({
                             owner: context.repo.owner,
                             repo: context.repo.repo,
                             commit_sha: context.payload.after
