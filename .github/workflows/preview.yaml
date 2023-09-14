@@ -45,7 +45,7 @@ jobs:
                   script: |
                       const fs = require("fs")
                       const path = require("path")
-                      const { pullRequestData: data } = await github.rest.repos.listPullRequestsAssociatedWithCommit({
+                      const {  data: pullRequestData  } = await github.rest.repos.listPullRequestsAssociatedWithCommit({
                             owner: context.repo.owner,
                             repo: context.repo.repo,
                             commit_sha: context.payload.after

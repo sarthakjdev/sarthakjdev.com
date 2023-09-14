@@ -39,7 +39,7 @@ jobs:
               uses: actions/github-script@v5
               with:
                   script: |
-                      const { pullRequestData: data } = await github.rest.repos.listPullRequestsAssociatedWithCommit({
+                      const { data: pullRequestData } = await github.rest.repos.listPullRequestsAssociatedWithCommit({
                             owner: context.repo.owner,
                             repo: context.repo.repo,
                             commit_sha: context.payload.after
