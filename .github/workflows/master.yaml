@@ -43,7 +43,7 @@ jobs:
 
             - name: Deployment Failure
               if: ${{ failure() }}
-              uses: actions/github-script@v5
+              uses: actions/github-script@v6
               with:
                   script: |
                       const { data: pullRequestData } = await github.rest.repos.listPullRequestsAssociatedWithCommit({
