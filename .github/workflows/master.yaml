@@ -4,6 +4,11 @@ on:
     push:
         branches:
             - 'master'
+    workflow_run:
+        workflows:
+            - 'Lint'
+        types:
+            - 'completed'
 
 jobs:
     deploy:
@@ -16,10 +21,6 @@ jobs:
             - name: User Node.js LTS
               uses: actions/setup-node@v2
 
-            # cache the node_modules here
-            - name: Cache Dependencies
-              uses: actions/cache@v3
-
             - name: Install Vercel CLI
               run: yarn global add vercel@canary
 
@@ -27,36 +28,35 @@ jobs:
               run: yarn install --frozen-lockfile
 
             - name: Build
-              run: yarn run Build
+              run: yarn run build
 
-            - name: Trigger Production Deployment
-              run: |
-                  
+            - name: Lint
+              run: yarn run lint
 
-            - name: Deployment Success
-              if: ${{ success() }}
+            - name: Linter Failed
+              if: ${{ failure() }}
               uses: actions/github-script@v5
               with:
                   script: |
                       const { pullRequestData: data } = await github.rest.repos.listPullRequestsAssociatedWithCommit({
-                            owner: context.repo.owner,
-                            repo: context.repo.repo,
-                            commit_sha: context.payload.after
-                        })
-
-                      const deploymentUrl = 
-
-                      if(pullRequestData[0]){
-                         await github.rest.issues.createComment({
-                              issue_number,
                               owner: context.repo.owner,
                               repo: context.repo.repo,
-                              body: `#### 🟢  Deployment success:
-                      Deployed Url: ${}`
+                              commit_sha: context.payload.after
                           })
-                      } else {
-                      throw new Error('Pull request data not found')
-                      }
+
+                        if(pullRequestData[0]){
+                           await github.rest.issues.createComment({
+                                issue_number,
+                                owner: context.repo.owner,
+                                repo: context.repo.repo,
+                                body: `### 🚨  Linter failed`
+                            })
+                        } else {
+                            throw new Error('Pull request data not found')
+                        }
+
+            - name: Trigger Production Deployment
+              run: vercel deploy -y --prod --token ${{ secrets.VERCEL_TOKEN }} > deployment-url.txt
 
             - name: Deployment Failure
               if: ${{ failure() }}
@@ -69,7 +69,7 @@ jobs:
                             commit_sha: context.payload.after
                         })
 
-                      const deploymentUrl = 
+                      // ! TODO: send notification either on slack or on discord
 
                       if(pullRequestData[0]){
                          await github.rest.issues.createComment({

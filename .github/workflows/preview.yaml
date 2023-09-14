@@ -4,21 +4,26 @@ on:
     push:
         branches-ignore:
             - 'master'
+    workflow_run:
+        workflows:
+            - 'Lint'
+        types:
+            - 'completed'
 
 jobs:
     deploy:
         timeout-minutes: 15
         runs-on: ubuntu-latest
+        env:
+            VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+            VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
         steps:
             - name: Checkout
               uses: actions/checkout@v2
 
             - name: User Node.js LTS
               uses: actions/setup-node@v2
-
-            # cache the node_modules here
-            - name: Cache Dependencies
-              uses: actions/cache@v3
 
             - name: Install Vercel CLI
               run: yarn global add vercel@canary
@@ -27,33 +32,33 @@ jobs:
               run: yarn install --frozen-lockfile
 
             - name: Build
-              run: yarn run Build
+              run: yarn run build
 
             - name: Trigger Staging Deployment
-              run: |
-                  console.log('triggering Vercel deployment')
+              run: vercel deploy -y --token ${{ secrets.VERCEL_TOKEN }} > deployment-url.txt
 
             - name: Deployment Success
               if: ${{ success() }}
               uses: actions/github-script@v5
               with:
                   script: |
+                      const fs = require("fs")
+                      const path = require("path")
                       const { pullRequestData: data } = await github.rest.repos.listPullRequestsAssociatedWithCommit({
                             owner: context.repo.owner,
                             repo: context.repo.repo,
                             commit_sha: context.payload.after
                         })
 
+                      const deploymentUrl = fs.readFileSync(path.resolve(path.resolve(), './deployment-url.txt'), 'utf8')
+
                       if(pullRequestData[0]){
-
-                        console.log(JSON.stringify(pullRequestData))
-
                          await github.rest.issues.createComment({
                               issue_number,
                               owner: context.repo.owner,
                               repo: context.repo.repo,
                               body: `#### 🟢  Deployment success:
-                      Deployed Url: ${}`
+                      Deployed Url: ${deploymentUrl}`
                           })
                       } else {
                       throw new Error('Pull request data not found')
@@ -81,5 +86,5 @@ jobs:
                       `
                           })
                       } else {
-                      throw new Error('Pull request data not found')
+                        throw new Error('Pull request data not found')
                       }

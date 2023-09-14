@@ -1,63 +1,65 @@
-'use server'
+'use client'
 
-import type { GetStaticPaths, GetServerSideProps, InferGetStaticPropsType } from 'next'
-
+import { useState } from 'react'
 import { HashnodeBlogsSchemaType } from '../../schema'
+import ms from 'ms'
 
-export const getStaticProps: GetServerSideProps<{
-	blogs: Zod.infer<typeof HashnodeBlogsSchemaType>
-}> = async () => {
+export const revalidate = ms('12h') / 1000
+
+async function getPaginatedBlogs(params: { pageNumber: number; pageSize: number }) {
 	try {
-		const articleQuery = `
-        query GetUserArticles($page: Int!) {
-            user(username: "sarthakjdev") {
-                publication {
-                    posts(page: $page) {
-                        title
-                        brief
-                        slug
-                    }
-                }
-            }
-        }
-    `
+		// ! TODO: use hashnode api 2.0 here
+		const blogQuery = `
+		    query GetUserArticles($page: Int!) {
+		        user(username: "sarthakjdev") {
+		            publication {
+		                posts(page: $page) {
+		                    title
+		                    brief
+		                    slug
+		                }
+		            }
+		        }
+		    }
+		`
 
 		const response = await fetch('https://api.hashnode.com/', {
+			cache: 'no-cache',
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json'
 			},
-			body: JSON.stringify({ query: articleQuery })
+			body: JSON.stringify({ query: blogQuery, variables: { page: params.pageNumber } })
 		})
-			.then(res => res.json())
-			.then(blogs => HashnodeBlogsSchemaType.parse(blogs))
 
-		console.log(response)
-
-		return {
-			props: {
-				blogs: response
-			}
+		if (!response.ok) {
+			console.error(response)
+			return []
+		} else {
+			// parse the response
+			const data = response.json()
+			// failure of parsing, will be handled in catch block
+			HashnodeBlogsSchemaType.parse(data)
+			return data
 		}
 	} catch (error) {
-		return {
-			props: {
-				blogs: []
-			},
-			notFound: true,
-			redirect: '/'
-		}
+		console.log(error)
+		return []
 	}
 }
 
-export const getStaticPaths: GetStaticPaths = () => {
-	return {
-		paths: [],
-		fallback: true
-	}
+export function generateStaticParams() {
+	return []
 }
 
-const Blogs: React.FC<{ blogs: InferGetStaticPropsType<typeof getStaticProps> }> = () => {
+const Blogs: React.FC = () => {
+	const [paginationMeta] = useState<{ page: number; pageSize: number }>({
+		page: 1,
+		pageSize: 10
+	})
+
+	getPaginatedBlogs({ pageNumber: paginationMeta.page, pageSize: paginationMeta.pageSize })
+
 	return <></>
 }
 
