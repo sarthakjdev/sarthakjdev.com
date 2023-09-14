@@ -10,11 +10,18 @@ on:
         types:
             - 'completed'
 
+concurrency:
+    group: ${{ github.workflow }}-${{ github.ref }}
+    cancel-in-progress: true
+
 jobs:
     deploy:
         environment: Production
         timeout-minutes: 15
         runs-on: ubuntu-latest
+        env:
+            VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+            VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
         steps:
             - name: Checkout
               uses: actions/checkout@v2
