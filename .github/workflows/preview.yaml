@@ -35,7 +35,7 @@ jobs:
               run: yarn run build
 
             - name: Trigger Staging Deployment
-              run: vercel deploy -y --token ${{ secrets.VERCEL_TOKEN }} > deployment-url.txt
+              run: vercel deploy -y --token=${{ secrets.VERCEL_TOKEN }} > deployment-url.txt
 
             - name: Deployment Success
               if: ${{ success() }}

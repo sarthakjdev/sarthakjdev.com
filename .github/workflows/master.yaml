@@ -56,7 +56,7 @@ jobs:
                         }
 
             - name: Trigger Production Deployment
-              run: vercel deploy -y --prod --token ${{ secrets.VERCEL_TOKEN }} > deployment-url.txt
+              run: vercel deploy -y --prod --token=${{ secrets.VERCEL_TOKEN }} > deployment-url.txt
 
             - name: Deployment Failure
               if: ${{ failure() }}
