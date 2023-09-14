@@ -57,6 +57,8 @@ jobs:
 
                       const deploymentUrl = fs.readFileSync(path.resolve(path.resolve(), './deployment-url.txt'), 'utf8')
 
+                      console.log(deploymentUrl)
+
                       if(pullRequestData[0]){
                          await github.rest.issues.createComment({
                               issue_number: context.issue.number,
