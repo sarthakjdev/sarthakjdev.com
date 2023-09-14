@@ -12,7 +12,7 @@ on:
 
 jobs:
     deploy:
-        environment: production
+        environment: Preview
         timeout-minutes: 15
         runs-on: ubuntu-latest
         env:
