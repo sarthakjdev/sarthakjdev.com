@@ -52,17 +52,17 @@ const Footer: React.FC<{ darkMode?: true }> = ({ darkMode }) => {
 
 	// todo: use clsx and add darkMode classes
 	return (
-		<footer className="bg-white">
+		<footer className="bg-none">
 			<div className="mx-auto max-w-7xl overflow-hidden px-4 py-12 sm:px-6 lg:px-8">
 				<nav className="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
 					{navigation.main.map(item => (
 						<div key={item.name} className="px-5 py-2">
-							<a
+							<Link
 								href={item.href}
-								className="text-base text-gray-500 hover:text-gray-900"
+								className="text-base font-semibold text-gray-600 hover:text-gray-900"
 							>
 								{item.name}
-							</a>
+							</Link>
 						</div>
 					))}
 				</nav>
@@ -78,8 +78,8 @@ const Footer: React.FC<{ darkMode?: true }> = ({ darkMode }) => {
 						</Link>
 					))}
 				</div>
-				<p className="mt-8 text-center text-base text-gray-400">
-					&copy; 2023 Rights Reserved
+				<p className="mt-8 text-center text-base font-semibold text-gray-600">
+					&copy; {new Date().getFullYear()} Rights Reserved
 				</p>
 			</div>
 		</footer>

@@ -6,10 +6,8 @@ const NavLinks = () => {
 	const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
 
 	return [
-		['Features', '#features'],
-		['Reviews', '#reviews'],
-		['Pricing', '#pricing'],
-		['FAQs', '#faqs']
+		['Blogs', '#blogs'],
+		['Tech Stack', '/tech-stack']
 	].map(([label, href], index) => (
 		<Link
 			key={label}

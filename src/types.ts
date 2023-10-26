@@ -1,7 +1,17 @@
-export type QuestionType = {
-	question: string
+export type BlogPostType = {
+	id: string
+	title: string
 	slug: string
-} & (
-	| { type: 'subjective'; answer: string | null }
-	| { type: 'objective'; options: { id: string; text: string | null; isAnswer: boolean }[] }
-)
+	url: string
+	canonicalUrl: string
+	coverImageUrl: string
+	subtitle: string
+	brief: string
+	readTimeInMinutes: number
+	author: {
+		name: string
+		profilePictureUrl: string
+		username: string
+	}
+	publishedAt: string
+}

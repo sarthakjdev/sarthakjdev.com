@@ -1,77 +1,38 @@
 'use client'
 
-import RootLayoutComponent from '~/components/layouts/root-layout'
-import { Testimonials } from '~/components/testimonials'
+import Blogs from '~/components/blogs'
+import Works from '~/components/works-and-products'
 
 export default function Home() {
 	return (
-		<RootLayoutComponent>
-			<main>
-				{/* main testimonial */}
-				<section>
-					<div className="bg-white pt-16 lg:py-24">
-						<div className="bg-primary-600 pb-16 lg:relative lg:z-10 lg:pb-0">
-							<div className="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-8 lg:px-8">
-								<div className="relative lg:-my-8">
-									<div
-										aria-hidden="true"
-										className="absolute inset-x-0 top-0 h-1/2 bg-white lg:hidden"
-									/>
-									<div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:h-full lg:p-0">
-										<div className="aspect-w-10 aspect-h-6 sm:aspect-w-16 sm:aspect-h-7 lg:aspect-none overflow-hidden rounded-xl shadow-xl lg:h-full">
-											<img
-												className="object-cover lg:h-full lg:w-full"
-												src="https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80"
-												alt=""
-											/>
-										</div>
-									</div>
-								</div>
-								<div className="mt-12 lg:col-span-2 lg:m-0 lg:pl-8">
-									<div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0 lg:py-20">
-										<blockquote>
-											<div>
-												<svg
-													className="h-12 w-12 text-white opacity-25"
-													fill="currentColor"
-													viewBox="0 0 32 32"
-													aria-hidden="true"
-												>
-													<path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
-												</svg>
-												<p className="mt-6 text-2xl font-medium text-white">
-													Lorem ipsum dolor sit amet, consectetur
-													adipiscing elit. Sed urna nulla vitae laoreet
-													augue. Amet feugiat est integer dolor auctor
-													adipiscing nunc urna, sit.
-												</p>
-											</div>
-											<footer className="mt-6">
-												<p className="text-base font-medium text-white">
-													Judith Black
-												</p>
-												<p className="text-base font-medium text-primary-100">
-													CEO at PureInsights
-												</p>
-											</footer>
-										</blockquote>
-									</div>
-								</div>
-							</div>
-						</div>
+		<main>
+			{/* hero section */}
+			<div className="flex max-w-2xl flex-col items-center justify-evenly pt-10 text-gray-600 lg:pb-5 xl:max-w-7xl xl:flex-row-reverse xl:justify-center xl:pt-20">
+				<div className="relative mb-10 flex select-none px-10 xl:mb-16">
+					{/* <img alt="My profile photo" loading="lazy" width="300" height="300" decoding="async" data-nimg="1" className="-z-10 object-contain rounded-full aspect-square xl:w-[400px] xl:h-[400]px" srcset="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.1ec56fa4.jpg&amp;w=384&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.1ec56fa4.jpg&amp;w=640&amp;q=75 2x" src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.1ec56fa4.jpg&amp;w=640&amp;q=75"> */}
+					<div className="absolute left-10 top-0 -z-20 scale-110 overflow-x-hidden opacity-30 blur-2xl transition-all xl:scale-125">
+						{/* <img alt="My profile photo" loading="lazy" width="300" height="300" decoding="async" data-nimg="1" className="object-contain rounded-full aspect-square saturate-[3] animate-[avatar_5s_linear_infinite]" style="color:transparent" srcset="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.1ec56fa4.jpg&amp;w=384&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.1ec56fa4.jpg&amp;w=640&amp;q=75 2x" src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.1ec56fa4.jpg&amp;w=640&amp;q=75"> */}
 					</div>
-				</section>
+				</div>
+				<div className="flex flex-col text-center xl:mr-20 xl:text-left">
+					<div className="mb-2">
+						<h1 className="mb-2 text-4xl font-bold md:text-5xl ">Sarthak Jain</h1>
+						<h2 className="mb-4 text-xl font-semibold">
+							Software Engineer with Backend and DevOps Focus
+						</h2>
+					</div>
+					<p className="font-content mb-8 max-w-2xl whitespace-break-spaces text-lg font-semibold lg:leading-relaxed">
+						Backend Engineer & DevOps Enthusiast bridging code & infrastructure.
+						Building ideas into technical reality
+					</p>
+				</div>
+			</div>
 
-				{/* work section */}
-				<section>
-					<h2>Works</h2>
-				</section>
+			{/* Works and products developed */}
+			<Works />
 
-				<section className="flex flex-col gap-4 bg-slate-50">
-					<h2 className="mx-auto text-center text-2xl">What Others say</h2>
-					<Testimonials />
-				</section>
-			</main>
-		</RootLayoutComponent>
+			{/* blogs */}
+			<Blogs />
+		</main>
 	)
 }

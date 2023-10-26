@@ -12,7 +12,7 @@ const nextConfig = {
 		TWITTER_USERNAME: process.env.TWITTER_USERNAME
 	},
 	images: {
-		domains: ['images.unsplash.com']
+		domains: ['images.unsplash.com' , 'cdn.hashnode.com']
 	},
 	compiler: {
 		removeConsole: process.env.NODE_ENV === 'production'
