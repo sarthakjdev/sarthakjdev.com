@@ -36,7 +36,7 @@ jobs:
         uses: actions/github-script@v5
         with:
           script: |
-            const { pullRequestData: data } = await github.rest.repos.listPullRequestsAssociatedWithCommit({
+            const { data: pullRequestData } = await github.rest.repos.listPullRequestsAssociatedWithCommit({
                     owner: context.repo.owner,
                     repo: context.repo.repo,
                     commit_sha: context.payload.after
@@ -67,13 +67,13 @@ jobs:
       - name: User Node.js LTS
         uses: actions/setup-node@v2
 
-      - name: Install Vercel CLI
-        run: pnpm global add vercel@canary
-
       - name: Install pnpm
         uses: pnpm/action-setup@v2.2.4
         with:
           run_install: false
+
+      - name: Install Vercel CLI
+        run: pnpm -g add vercel@canary
 
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile
