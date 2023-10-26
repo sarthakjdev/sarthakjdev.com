@@ -35,7 +35,7 @@ function ChevronUpIcon(props: SVGAttributes<SVGElement>) {
 	)
 }
 
-function MobileNavLink({ children, ...props }) {
+function MobileNavLink({ children, ...props }: any ) {
 	return (
 		<Popover.Button
 			as={Link}
