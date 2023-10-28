@@ -1,4 +1,4 @@
-import { type BlogPostType } from "./types"
+import { type BlogPostType } from './types'
 
 export const getBlogs = async (count: number) => {
 	const query = {
