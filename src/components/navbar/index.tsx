@@ -55,7 +55,7 @@ const Header = () => {
 				<div className="relative z-50 mx-auto flex max-w-7xl justify-between px-4 py-8 sm:px-6 lg:px-8">
 					<div className="relative z-10 flex items-center gap-16">
 						<Link href="/" aria-label="Home">
-							<h2 className="text-xl font-black">sarthak</h2>
+							<h2 className="text-xl font-black text-primary-500">sarthak</h2>
 						</Link>
 						<div className="hidden lg:flex lg:gap-10">
 							<Navlinks />

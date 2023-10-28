@@ -29,15 +29,15 @@ const Blogs = () => {
 
 	return (
 		<div className="bg-nonw relative px-4 pb-20 pt-16 sm:px-6 lg:px-8 lg:pb-28 lg:pt-24">
-			<div className="absolute inset-0">
+			{/* <div className="absolute inset-0">
 				<div className="h-1/3 bg-none sm:h-2/3" />
-			</div>
+			</div> */}
 			<div className="relative mx-auto max-w-7xl">
 				<div className="text-center">
 					<h2 className="text-3xl font-extrabold tracking-tight text-primary-500 sm:text-4xl">
 						Technical Insights
 					</h2>
-					<p className="text-secondary-500 mx-auto mt-3 max-w-2xl text-xl sm:mt-4">
+					<p className="text-secondary-500 mx-auto mt-3 max-w-2xl text-xl text-gray-600 sm:mt-4 ">
 						Dive into the latest thoughts, stories, and expertise from the tech and
 						innovation frontier.
 					</p>
@@ -80,8 +80,8 @@ const Blogs = () => {
 					</div>
 				)}
 			</div>
-			<div className="mx-auto mt-10 flex max-w-7xl items-end justify-end">
-				<Link href={'https://blog.sarthakjdev.com'} target="_blank" className="">
+			<div className="z-50 mx-auto mt-10 flex max-w-7xl cursor-pointer items-end justify-end">
+				<Link href={'https://blog.sarthakjdev.com'} target="_blank">
 					<Button size={'medium'}>
 						Read More Blogs <ArrowTopRightOnSquareIcon className="h-4 w-4" />
 					</Button>

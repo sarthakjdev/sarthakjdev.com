@@ -15,7 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 	return (
 		<html lang="en">
 			<body
-				className={clsx(inter.className, "bg-[url('/porfolio-background.png')] bg-contain")}
+				className={clsx(inter.className, "bg-[url('/new.png')] bg-contain")}
 			>
 				<StandardLayout>{children}</StandardLayout>
 			</body>

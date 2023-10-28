@@ -37,7 +37,7 @@ const Works = () => {
 					<h2 className="text-3xl font-extrabold tracking-tight text-primary-500 sm:text-4xl">
 						Featured Works and Products
 					</h2>
-					<p className="text-secondary-500 mx-auto mt-3 max-w-2xl text-xl sm:mt-4">
+					<p className="text-secondary-500 mx-auto mt-3 max-w-2xl text-xl text-gray-600 sm:mt-4">
 						From Conceptualization to Code: Turning Ideas into Digital Solutions.
 					</p>
 				</div>
