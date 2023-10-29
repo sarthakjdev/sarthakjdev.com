@@ -50,9 +50,9 @@ function MobileNavLink({ children, ...props }: any) {
 
 const Header = () => {
 	return (
-		<header>
+		<header className="fixed w-full bg-transparent backdrop-blur-sm z-[9999]">
 			<nav>
-				<div className="relative z-50 mx-auto flex max-w-7xl justify-between px-4 py-8 sm:px-6 lg:px-8">
+				<div className="lg:py- relative z-50 mx-auto flex max-w-7xl justify-between px-4 py-6 lg:py-4 sm:px-6 lg:px-8">
 					<div className="relative z-10 flex items-center gap-16">
 						<Link href="/" aria-label="Home">
 							<h2 className="text-xl font-black text-primary-500">sarthak</h2>

@@ -8,26 +8,16 @@ export default function Home() {
 	return (
 		<main>
 			{/* hero section */}
-			<div className="mx-auto flex max-w-2xl flex-col items-center justify-evenly pt-10 text-gray-800 lg:pb-5 xl:max-w-7xl xl:flex-row-reverse xl:justify-center xl:pt-20">
+			<div className="mx-auto flex max-w-2xl flex-col items-center justify-evenly pt-24 text-gray-800 lg:pb-5 xl:max-w-7xl xl:flex-row-reverse xl:justify-center xl:pt-24">
 				<div className="relative mb-10 flex select-none px-10 xl:mb-16">
 					<Image
 						alt="My profile photo"
 						loading="lazy"
 						width="300"
 						height="300"
-						className="aspect-square animate-[avatar_5s_linear_infinite] rounded-full object-contain "
+						className="aspect-square rounded-full object-contain"
 						src={'/portfolio-image.png'}
 					/>
-					<div className="absolute left-10 top-0 -z-20 scale-110 overflow-x-hidden opacity-30 blur-2xl transition-all xl:scale-125">
-						<Image
-							alt="My profile photo"
-							loading="lazy"
-							width="300"
-							height="300"
-							className="aspect-square animate-[avatar_5s_linear_infinite] rounded-full object-contain"
-							src={'/portfolio-image.png'}
-						/>
-					</div>
 				</div>
 				<div className="flex flex-col text-center xl:mr-20 xl:text-left">
 					<div className="mb-2">

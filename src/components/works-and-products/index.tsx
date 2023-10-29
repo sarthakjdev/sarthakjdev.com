@@ -28,10 +28,7 @@ const Works = () => {
 	}, [])
 
 	return (
-		<div className="bg-nonw relative px-4 pb-20 pt-16 sm:px-6 lg:px-8 lg:pb-28 lg:pt-24">
-			<div className="absolute inset-0">
-				<div className="h-1/3 bg-none sm:h-2/3" />
-			</div>
+		<div className="bg-none relative px-4 pb-20 pt-16 sm:px-6 lg:px-8 lg:pb-28 lg:pt-24">
 			<div className="relative mx-auto max-w-7xl">
 				<div className="text-center">
 					<h2 className="text-3xl font-extrabold tracking-tight text-primary-500 sm:text-4xl">

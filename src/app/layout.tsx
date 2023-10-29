@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
 		<html lang="en">
-			<body className={clsx(inter.className, "bg-[url('/new.png')] bg-contain")}>
+			<body className={clsx(inter.className, "bg-[url('/new.png')] bg-contain bg-fixed")}>
 				<StandardLayout>{children}</StandardLayout>
 			</body>
 		</html>
