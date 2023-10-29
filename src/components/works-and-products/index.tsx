@@ -28,7 +28,7 @@ const Works = () => {
 	}, [])
 
 	return (
-		<div className="bg-none relative px-4 pb-20 pt-16 sm:px-6 lg:px-8 lg:pb-28 lg:pt-24">
+		<div className="relative bg-none px-4 pb-20 pt-16 sm:px-6 lg:px-8 lg:pb-28 lg:pt-24">
 			<div className="relative mx-auto max-w-7xl">
 				<div className="text-center">
 					<h2 className="text-3xl font-extrabold tracking-tight text-primary-500 sm:text-4xl">
