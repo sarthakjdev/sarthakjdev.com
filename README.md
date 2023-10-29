@@ -6,12 +6,6 @@
 [![GitHub stars](https://img.shields.io/github/stars/sarthakjdev/sarthaks-portfolio.svg)](https://github.com/sarthakjdev/sarthaks-portfolio/stargazers)
 [![GitHub license](https://img.shields.io/github/license/sarthakjdev/sarthaks-portfolio.svg)](https://github.com/sarthakjdev/sarthaks-portfolio/blob/master/LICENSE)
 
-## :memo: About The Project
-
-![Project Screenshot](url_to_project_screenshot)
-
-Here's a brief description of your website, detailing its goals, core functionalities, and the technology stack utilized.
-
 ### :hammer_and_wrench: Built With
 
 -   [Next.js](https://nextjs.org/)
