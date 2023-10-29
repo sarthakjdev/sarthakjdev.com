@@ -1,6 +1,6 @@
 # :sparkles: [sarthakjdev.com](https://sarthakjdev.com) :sparkles:
 
-[![Website](https://img.shields.io/website?down_color=red&down_message=offline&up_message=online&url=https%3A%2F%sarthakjdev.com)](https://yourwebsite.com)
+[![Website](https://img.shields.io/website?down_color=red&down_message=offline&up_message=online&url=https://sarthakjdev.com)](https://yourwebsite.com)
 [![GitHub issues](https://img.shields.io/github/issues/sarthakjdev/sarthaks-portfolio.svg)](https://github.com/sarthakjdev/sarthaks-portfolio/issues/)
 [![GitHub forks](https://img.shields.io/github/forks/sarthakjdev/sarthaks-portfolio.svg)](https://github.com/sarthakjdev/sarthaks-portfolio/network)
 [![GitHub stars](https://img.shields.io/github/stars/sarthakjdev/sarthaks-portfolio.svg)](https://github.com/sarthakjdev/sarthaks-portfolio/stargazers)
