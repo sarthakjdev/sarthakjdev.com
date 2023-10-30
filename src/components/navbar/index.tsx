@@ -52,7 +52,7 @@ const Header = () => {
 	return (
 		<header className="fixed z-[9999] w-full bg-transparent backdrop-blur-sm">
 			<nav>
-				<div className="lg:py- relative z-50 mx-auto flex max-w-7xl justify-between px-4 py-6 sm:px-6 lg:px-8 lg:py-4">
+				<div className="lg:py- relative z-50 mx-auto flex max-w-7xl justify-between px-4 py-4 sm:px-6 lg:px-8">
 					<div className="relative z-10 flex items-center gap-16">
 						<Link href="/" aria-label="Home">
 							<h2 className="text-xl font-black text-primary-500">sarthak</h2>
