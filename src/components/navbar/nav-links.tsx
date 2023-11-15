@@ -7,7 +7,8 @@ const NavLinks = () => {
 
 	return [
 		['Blogs', '#blogs'],
-		['Tech Stack', '/tech-stack']
+		['Tech Stack', '/tech-stack'],
+		['Home Server', 'https://docs.sarthakjdev.com']
 	].map(([label, href], index) => (
 		<Link
 			key={label}
