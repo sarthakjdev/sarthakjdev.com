@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image'
 import Link from 'next/link'
 import { getBlogs } from '~/reusable-functions'
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/solid'
@@ -8,6 +7,8 @@ import { useEffect, useRef, useState } from 'react'
 import { type BlogPostType } from '~/types'
 import LoadingSpinner from '~/components/loading-spinner'
 import Button from '../design-system/button'
+import { projects } from './data'
+import ProjectCard from './project-card'
 
 const Works = () => {
 	const [blogs, setBlogs] = useState<BlogPostType[] | null>(null)
@@ -45,33 +46,8 @@ const Works = () => {
 					</div>
 				) : (
 					<div className="mx-auto mt-12 grid max-w-lg gap-5 lg:max-w-none lg:grid-cols-3">
-						{blogs.map(post => (
-							<div
-								key={post.title}
-								className="flex flex-col overflow-hidden rounded-lg bg-zinc-50 shadow-xl"
-							>
-								<div className="flex-shrink-0">
-									<Image
-										className="h-48 w-full object-cover"
-										src={post.coverImageUrl}
-										alt=""
-										height={1600}
-										width={840}
-									/>
-								</div>
-								<div className="flex flex-1 flex-col justify-between p-6">
-									<div className="flex-1">
-										<Link href={post.url} className="mt-2 block">
-											<p className="text-xl font-semibold text-gray-900">
-												{post.title}
-											</p>
-											<p className="text-secondary-500 mt-3 text-base">
-												{post.subtitle}
-											</p>
-										</Link>
-									</div>
-								</div>
-							</div>
+						{projects.map(project => (
+							<ProjectCard project={project} key={project.slug} />
 						))}
 					</div>
 				)}
