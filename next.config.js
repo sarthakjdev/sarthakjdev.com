@@ -1,3 +1,5 @@
+const ANALYTICS_BASE_URL = 'https://hn-ping2.hashnode.com'
+const ADVANCED_ANALYTICS_BASE_URL = 'https://stats.hashnode.com'
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	reactStrictMode: true,
@@ -25,6 +27,18 @@ const nextConfig = {
 			{
 				source: '/blog/:path*',
 				destination: 'https://blog-sarthakjdev-com.vercel.app/:path*'
+			},
+			{
+				source: '/ping/data-event',
+				destination: `${ANALYTICS_BASE_URL}/api/data-event`
+			},
+			{
+				source: '/ping/view',
+				destination: `${ANALYTICS_BASE_URL}/api/view`
+			},
+			{
+				source: '/api/collect',
+				destination: `${ADVANCED_ANALYTICS_BASE_URL}/api/collect`
 			}
 		]
 	}
