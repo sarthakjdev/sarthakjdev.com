@@ -7,8 +7,8 @@
 		"build": "NODE_ENV=production next build",
 		"start": "NODE_ENV=production  next start",
 		"lint": "next lint",
-		"prepare": "yarn husky install",
-		"pretty": "yarn prettier --write \"src/**/*.{ts,tsx,css}\""
+		"prepare": "pnpm husky install",
+		"pretty": "pnpm prettier --write \"src/**/*.{ts,tsx,css}\""
 	},
 	"dependencies": {
 		"@headlessui/react": "^1.7.17",
