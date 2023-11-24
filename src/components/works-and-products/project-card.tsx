@@ -10,7 +10,8 @@ export const arrayRandomproject = (array: string[]) => {
 
 const ProjectCard: React.FC<{ project: (typeof projects)[0] }> = ({ project }) => {
 	const pathname = usePathname()
-	const [show, setShow] = useState(false)
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
+	const [_, setShow] = useState(false)
 	const [height] = useState(arrayRandomproject(['400px', '454px', '310px']))
 
 	return (
