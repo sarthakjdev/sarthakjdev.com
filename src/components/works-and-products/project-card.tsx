@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
-import SideBarModal from '../sidebar-modal'
 import { type projects } from './data'
 import Link from 'next/link'
 
@@ -88,13 +87,6 @@ const ProjectCard: React.FC<{ project: (typeof projects)[0] }> = ({ project }) =
 							)}
 						</div>
 					</div>
-
-					<SideBarModal
-						show={show}
-						closeShow={() => setShow(false)}
-						size="lg"
-						data={project}
-					/>
 				</>
 			)}
 		</>
