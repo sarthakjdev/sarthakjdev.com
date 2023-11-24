@@ -1,15 +1,36 @@
+/* -------------------------------------------------------------------------- */
+/*                            External Dependencies                           */
+/* -------------------------------------------------------------------------- */
 import React, { useState } from 'react'
-import styled from 'styled-components'
-import { usePathname } from 'next/navigation'
-
 import Image from 'next/image'
-import { type projects } from './data'
+// import styled from 'styled-components';
+import { useRouter } from 'next/navigation'
+/* -------------------------- Internal Dependencies ------------------------- */
+// import Image from '../Image';
+import SideBarModal from '../sidebar-modal'
 
-const ProjectCard: React.FC<{ project: typeof projects }> = ({ project }) => {
-	const pathname = usePathname()
+/* -------------------------- MansoryItem PropTypes ------------------------- */
+interface MansoryItemProps {
+	item: {
+		title: string
+		description?: string
+		imageUrl: string
+		link?: string
+		github?: string
+		about?: string
+		technologies?: string[]
+	}
+}
+
+export const arrayRandomItem = array => {
+	return array[(Math.random() * array.length) | 0]
+}
+
+const MansoryItem: React.FC<MansoryItemProps> = ({ item }) => {
+	const router = useRouter()
+	const { pathname } = router
 	const [show, setShow] = useState(false)
-
-	const [height] = useState(Math.random() * 3)
+	const [height] = useState(arrayRandomItem(['400px', '454px', '310px']))
 
 	return (
 		<>
@@ -23,23 +44,30 @@ const ProjectCard: React.FC<{ project: typeof projects }> = ({ project }) => {
 					id="cardHover"
 					aria-label={`${item.title} ${item.description}`}
 				>
-					<MansoryItemStyle
+					<div
 						{...{ item }}
 						style={{
 							height
 						}}
 						role="gridcell"
+						className="mansoryItemStyle relative flex cursor-pointer break-inside-avoid items-end overflow-hidden rounded-lg bg-center bg-no-repeat object-cover px-8 py-6 before:pointer-events-none before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:-z-10 before:block after:pointer-events-none after:absolute after:bottom-0 after:left-0 after:right-0 after:top-0 after:z-10 after:opacity-[0.3]    hover:cursor-none hover:after:opacity-100 focus:cursor-none focus:after:opacity-100"
 					>
-						<Image src={item.imageUrl} alt={item.imageUrl} />
+						<Image
+							src={item.imageUrl}
+							alt={item.imageUrl}
+							height={}
+							width={}
+							className="absolute left-0 top-0 object-cover"
+						/>
 						<div className="content__slate">
 							<h3>{item.title}</h3>
 							<p>{item.description}</p>
 						</div>
-					</MansoryItemStyle>
+					</div>
 				</a>
 			) : (
 				<>
-					<MansoryItemStyle
+					<div
 						{...{ item }}
 						style={{
 							height
@@ -52,168 +80,57 @@ const ProjectCard: React.FC<{ project: typeof projects }> = ({ project }) => {
 							if (e.key === 'Enter') return setShow(true)
 						}}
 						tabIndex={0}
+						className="mansoryItemStyle relative flex cursor-pointer break-inside-avoid items-end overflow-hidden rounded-lg bg-center bg-no-repeat object-cover px-8 py-6 before:pointer-events-none before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:-z-10 before:block after:pointer-events-none after:absolute after:bottom-0 after:left-0 after:right-0 after:top-0 after:z-10 after:opacity-[0.3]    hover:cursor-none hover:after:opacity-100 focus:cursor-none focus:after:opacity-100"
 					>
-						<Image src={item.imageUrl} alt={item.imageUrl} />
-						<div className="content__slate">
-							<h3>{item.title}</h3>
-							<p>{item.description}</p>
+						<Image
+							src={item.imageUrl}
+							alt={item.imageUrl}
+							height={}
+							width={}
+							className="absolute left-0 top-0 object-cover"
+						/>
+						<div className="content__slate translate-y-[10%] opacity-0  transition-all delay-0 duration-300 ease-in-out hover:z-50 hover:transform-none hover:opacity-100 focus:z-50 focus:transform-none focus:opacity-100">
+							<h3 className="text-base font-extrabold text-white">{item.title}</h3>
+							<p className="text-sm text-[#d5d5d5]">{item.description}</p>
 							{item.technologies && (
 								<p className="d-flex flex-wrap">
 									{item.technologies.map((tech: string, index: number) => (
-										<span key={index} className="d-block mb-1">
+										<span
+											key={index}
+											className="d-block mb-1 mr-1 rounded-[50px] bg-[#696869] px-2 py-1 text-xs font-medium capitalize text-white"
+										>
 											{tech}
 										</span>
 									))}
 								</p>
 							)}
 						</div>
-					</MansoryItemStyle>
+					</div>
+
+					<SideBarModal
+						show={show}
+						closeShow={() => setShow(false)}
+						size="lg"
+						data={item}
+					/>
 				</>
 			)}
 		</>
 	)
 }
 
-const MansoryItemStyle = styled.div`
-	margin: 0 0 1.5em;
-	position: relative;
+// const MansoryItemStyle = styled.div`
+// 	margin: 0 0 1.5em;
+// 	background-color: var(--button-index);
+// 	img {
+// 		width: 100% !important;
+// 		height: 100% !important;
+// 	}
+// 	p {
+// 		font-size: calc(var(--font-sm) + 0.9px);
+// 	}
 
-	cursor: pointer;
-	border-radius: 9px;
-	object-fit: cover;
-	background-color: var(--button-index);
-	background-position: center;
-	background-repeat: no-repeat;
-	overflow: hidden;
-	padding: 1.4rem 2rem;
-	display: flex;
-	align-items: flex-end;
-	border-radius: 9px;
-	break-inside: avoid;
+// 	}
+// `
 
-	@media (max-width: 758px) {
-		padding: 1.4rem 1rem;
-	}
-
-	img {
-		width: 100% !important;
-		height: 100% !important;
-		position: absolute;
-		left: 0 !important;
-		top: 0 !important;
-		object-fit: cover;
-	}
-
-	&:before {
-		content: '';
-		pointer-events: none;
-		display: block;
-		position: absolute;
-		top: 0px;
-		right: 0px;
-		bottom: 0px;
-		left: 0px;
-		z-index: -1;
-		background: radial-gradient(
-			circle at center center,
-			white 10%,
-			whitesmoke 11%,
-			whitesmoke 100%
-		);
-	}
-
-	&:after {
-		content: '';
-		pointer-events: none;
-		position: absolute;
-		z-index: 1;
-		top: 0px;
-		right: 0px;
-		bottom: 0px;
-		left: 0px;
-		opacity: 0.3;
-		/* background: linear-gradient(
-      191deg,
-      rgba(0, 0, 0, 0.1) 20%,
-      rgba(0, 0, 0, 0.76) 100%
-    ); */
-		background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 10%, rgb(0 0 0 / 78%) 80%);
-	}
-
-	&:hover,
-	&:focus {
-		cursor: none;
-		&:after {
-			opacity: 1;
-		}
-		div.content__slate {
-			z-index: 999;
-			transform: none;
-			opacity: 1;
-		}
-	}
-
-	h3 {
-		color: #fff;
-		font-size: var(--font-x-md);
-		font-weight: 800;
-	}
-
-	p {
-		color: #d5d5d5 !important;
-		font-size: calc(var(--font-sm) + 0.9px);
-		span {
-			background: #696869;
-			padding: 4px 10px;
-			border-radius: 50px;
-			text-transform: capitalize;
-			font-size: 11px;
-			margin-right: 6px;
-			color: #fff;
-			font-weight: 500;
-		}
-	}
-
-	div.content__slate {
-		opacity: 0;
-		transform: translateY(10%);
-		transition:
-			opacity 300ms ease-in-out 0s,
-			transform 300ms ease-in-out 0s;
-	}
-
-	@media (max-width: 585px) {
-		&:after {
-			opacity: 1 !important;
-		}
-		div.content__slate {
-			z-index: 999 !important;
-			transform: none !important;
-			opacity: 1 !important;
-		}
-	}
-
-	@media (max-width: 989px) {
-		&:after {
-			opacity: 1 !important;
-		}
-		div.content__slate {
-			z-index: 999 !important;
-			transform: none !important;
-			opacity: 1 !important;
-		}
-	}
-
-	@media (max-width: 220px) {
-		&:after {
-			opacity: 1 !important;
-		}
-		div.content__slate {
-			z-index: 999 !important;
-			transform: none !important;
-			opacity: 1 !important;
-		}
-	}
-`
-
-export default ProjectCard
+export default MansoryItem
