@@ -1,11 +1,20 @@
 import './globals.css'
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import StandardLayout from '~/components/layouts/standard-layout'
 import { Inter } from 'next/font/google'
 import { clsx } from 'clsx'
 import { siteDescription } from '~/constant'
 
 const inter = Inter({ subsets: ['latin'] })
+
+export const viewport: Viewport = {
+	themeColor: {
+		color: '#06b6d4'
+	},
+	colorScheme: 'light',
+	width: 'device-width',
+	initialScale: 1
+}
 
 export const metadata: Metadata = {
 	title: 'Sarthakjdev',
