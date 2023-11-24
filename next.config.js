@@ -2,10 +2,16 @@
 const nextConfig = {
 	reactStrictMode: true,
 	images: {
-		remotePatterns: [{
-			protocol: 'https',
-			hostname: 'images.unsplash.com'
-		} ,  {protocol: 'https' , hostname: 'cdn.hashnode.com'}]
+		remotePatterns: [
+			{
+				protocol: 'https',
+				hostname: 'images.unsplash.com'
+			},
+			{
+				protocol: 'https',
+				hostname: 'cdn.hashnode.com'
+			}
+		]
 	},
 	compiler: {
 		removeConsole: process.env.NODE_ENV === 'production'
