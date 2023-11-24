@@ -2,7 +2,6 @@
 
 import Image from 'next/image'
 import Blogs from '~/components/blogs'
-import Works from '~/components/works-and-products'
 
 export default function Home() {
 	return (
@@ -34,7 +33,7 @@ export default function Home() {
 			</div>
 
 			{/* Works and products developed */}
-			<Works />
+			{/* <Works /> */}
 
 			{/* blogs */}
 			<Blogs />

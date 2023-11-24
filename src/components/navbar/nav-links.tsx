@@ -6,7 +6,7 @@ const NavLinks = () => {
 	const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
 
 	return [
-		['Blogs', '#blogs'],
+		['Blogs', '/blog'],
 		['Tech Stack', '/tech-stack'],
 		['Home Server', 'https://docs.sarthakjdev.com']
 	].map(([label, href], index) => (

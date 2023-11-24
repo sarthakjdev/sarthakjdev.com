@@ -2,7 +2,7 @@ import { type BlogPostType } from './types'
 
 export const getBlogs = async (count: number) => {
 	const query = {
-		query: `query { publication(host: "blog.sarthakjdev.com"){  posts(first: ${count}){edges{node {
+		query: `query { publication(host: "sarthakjdev.hashnode.dev"){  posts(first: ${count}){edges{node {
 	id       
 	title      
 	slug   

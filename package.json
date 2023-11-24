@@ -7,8 +7,8 @@
 		"build": "NODE_ENV=production next build",
 		"start": "NODE_ENV=production  next start",
 		"lint": "next lint",
-		"prepare": "yarn husky install",
-		"pretty": "yarn prettier --write \"src/**/*.{ts,tsx,css}\""
+		"prepare": "pnpm husky install",
+		"pretty": "pnpm prettier --write \"src/**/*.{ts,tsx,css}\""
 	},
 	"dependencies": {
 		"@headlessui/react": "^1.7.17",
@@ -25,7 +25,7 @@
 		"framer-motion": "^10.16.4",
 		"immer": "^10.0.2",
 		"ms": "^2.1.3",
-		"next": "13.4.19",
+		"next": "14.0.3",
 		"nookies": "^2.5.2",
 		"patch-package": "^8.0.0",
 		"postcss": "8.4.29",

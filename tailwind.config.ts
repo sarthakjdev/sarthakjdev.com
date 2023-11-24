@@ -16,6 +16,21 @@ const config: Config = {
 			},
 			colors: {
 				primary: colors.cyan
+			},
+			animation: {
+				fadeLeft: 'fadeLedt 0.5s ease-in-out infinite'
+			},
+			keyframes: {
+				fadeLeft: {
+					'0%': {
+						opacity: '0.8',
+						transform: 'translateX(80%)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateX(0%)'
+					}
+				}
 			}
 		}
 	},
