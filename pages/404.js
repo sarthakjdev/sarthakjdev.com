@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-import NotFound from '../src/components/404'
+
 
 
 export default function Custom404(){
@@ -9,7 +9,9 @@ export default function Custom404(){
                 <Head>
                 <title>404 | Sarthak Jain Portfolio</title>
                 </Head>
-                <NotFound />
+                <h2 className="text-gray-700 text-5xl font-bold text-center">
+          🚧 🚧 Under Maintenance 🚧 🚧
+        </h2>
             </>
     )
 }

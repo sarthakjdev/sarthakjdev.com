@@ -14,7 +14,6 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background-color: #0a0f21;
   overflow-x: hidden;
 }
 
@@ -42,16 +41,6 @@ a {
 .section-head-outlined {
   -webkit-text-stroke: 1px #ffffff;
 }
-
-/* #main-name-head {
-  font-size: 6em;
-  letter-spacing: 15px;
-  color: #0e3742;
-  width: 100%;
-  -webkit-box-reflect: below 1px linear-gradient(transparent, #0008);
-  outline: none;
-  animation: animate 5s linear infinite;
-} */
 
 @keyframes animate {
   0%,
