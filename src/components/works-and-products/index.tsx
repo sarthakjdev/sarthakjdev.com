@@ -52,13 +52,6 @@ const Works = () => {
 					</div>
 				)}
 			</div>
-			<div className="mx-auto mt-10 flex max-w-7xl items-end justify-end">
-				<Link href={'https://blog.sarthakjdev.com'} target="_blank" className="">
-					<Button size={'medium'}>
-						Read More Blogs <ArrowTopRightOnSquareIcon className="h-4 w-4" />
-					</Button>
-				</Link>
-			</div>
 		</div>
 	)
 }

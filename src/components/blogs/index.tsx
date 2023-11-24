@@ -78,7 +78,7 @@ const Blogs = () => {
 				)}
 			</div>
 			<div className="z-50 mx-auto mt-10 flex max-w-6xl cursor-pointer items-end justify-end">
-				<Link href={'https://blog.sarthakjdev.com'} target="_blank">
+				<Link href={'/blog'} target="_blank">
 					<Button size={'medium'}>
 						Read More Blogs <ArrowTopRightOnSquareIcon className="h-4 w-4" />
 					</Button>
