@@ -34,7 +34,7 @@ export default function Home() {
 			</div>
 
 			{/* Works and products developed */}
-			<Works />
+			{/* <Works /> */}
 
 			{/* blogs */}
 			<Blogs />
