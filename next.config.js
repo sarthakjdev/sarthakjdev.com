@@ -1,5 +1,12 @@
 const ANALYTICS_BASE_URL = 'https://hn-ping2.hashnode.com'
 const ADVANCED_ANALYTICS_BASE_URL = 'https://stats.hashnode.com'
+
+const blogRewriteHostname =
+	process.env.NODE_ENV === 'production'
+		? 'https://blog-sarthakjdev-com.vercel.app'
+		: 'http://localhost:3000'
+
+console.log({ NODE_ENV: process.env.NODE_ENV })
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	reactStrictMode: true,
@@ -22,11 +29,11 @@ const nextConfig = {
 		return [
 			{
 				source: '/blog',
-				destination: 'https://blog-sarthakjdev-com.vercel.app/'
+				destination: `${blogRewriteHostname}/`
 			},
 			{
 				source: '/blog/:path*',
-				destination: 'https://blog-sarthakjdev-com.vercel.app/:path*'
+				destination: `${blogRewriteHostname}/:path*`
 			},
 			{
 				source: '/ping/data-event',
