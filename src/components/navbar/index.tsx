@@ -101,17 +101,14 @@ const Header = () => {
 													className="absolute inset-x-0 top-0 z-0 origin-top rounded-b-2xl bg-gray-50 px-6 pb-6 pt-32 shadow-2xl shadow-gray-900/20"
 												>
 													<div className="space-y-4">
-														<MobileNavLink href="#features">
-															Features
+														<MobileNavLink href="/blog">
+															Blogs
 														</MobileNavLink>
-														<MobileNavLink href="#reviews">
-															Reviews
+														<MobileNavLink href="/tech-stack">
+															Tech Stack
 														</MobileNavLink>
-														<MobileNavLink href="#pricing">
-															Pricing
-														</MobileNavLink>
-														<MobileNavLink href="#faqs">
-															FAQs
+														<MobileNavLink href="https://homelab.sarthakjdev.com">
+															Homer Server
 														</MobileNavLink>
 													</div>
 													<div className="mt-8 flex flex-col gap-4">
