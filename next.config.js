@@ -6,7 +6,6 @@ const blogRewriteHostname =
 		? 'https://blog-sarthakjdev-com.vercel.app'
 		: 'http://localhost:3000'
 
-console.log({ NODE_ENV: process.env.NODE_ENV })
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	reactStrictMode: true,
