@@ -28,11 +28,11 @@ const nextConfig = {
 		return [
 			{
 				source: '/blog',
-				destination: `${blogRewriteHostname}/`
+				destination: `${blogRewriteHostname}/blog`
 			},
 			{
 				source: '/blog/:path*',
-				destination: `${blogRewriteHostname}/:path*`
+				destination: `${blogRewriteHostname}/blog/:path*`
 			},
 			{
 				source: '/ping/data-event',
