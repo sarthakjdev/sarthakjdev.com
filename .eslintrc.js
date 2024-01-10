@@ -41,13 +41,10 @@ module.exports = {
 			'parent',
 			'top'
 		],
-
 		'react/no-unescaped-entities': 'off',
 		'react-hooks/exhaustive-deps': 'error',
-
 		'no-empty-pattern': 'off',
 		'no-debugger': 'error',
-
 		'@typescript-eslint/naming-convention': [
 			'warn',
 			{
@@ -60,14 +57,24 @@ module.exports = {
 				format: ['StrictPascalCase']
 			}
 		],
-
+		'@typescript-eslint/no-restricted-imports': [
+			'error',
+			{
+				paths: [
+					{
+						name: 'dayjs',
+						message: 'Please use dayjs from ~/util/dayjs instead.',
+						allowTypeImports: true
+					}
+				]
+			}
+		],
 		'@typescript-eslint/consistent-type-imports': [
 			'error',
 			{
 				fixStyle: 'inline-type-imports'
 			}
 		],
-
 		'import/default': 'off',
 		'import/no-self-import': 'error',
 		'import/no-cycle': [

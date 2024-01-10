@@ -79,9 +79,6 @@ jobs:
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Build
-        run: pnpm run build
-
       - name: Trigger Staging Deployment
         run: vercel deploy -y --token=${{ secrets.VERCEL_TOKEN }} > deployment-url.txt
 

@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import Blogs from '~/components/blogs'
+import Blogs from '~/components/blog/home-page-blog-section'
 
 export default function Home() {
 	return (
