@@ -42,7 +42,7 @@ export const metadata: Metadata = {
 		title: 'Sarthakjdev',
 		description: siteDescription,
 		images: [{ url: 'https://sarthakjdev.com/open-graph.png' }],
-		siteName: 'Sarthakjdev'
+		siteName: 'sarthakjdev'
 	},
 	twitter: {
 		card: 'summary_large_image',
@@ -58,8 +58,8 @@ export const metadata: Metadata = {
 	formatDetection: { telephone: false },
 	appleWebApp: true,
 	assets: 'https://sarthakjdev.com/assets',
-	category: 'Innovation, Product Development, Business Solutions',
-	classification: 'Innovative Development Agency',
+	category: 'Engineering Backend Development Software Development',
+	classification: 'Backend DevOps Software Engineer',
 	other: {
 		'X-UA-Compatible': 'IE=edge,chrome=1',
 		'mobile-web-app-capable': 'yes'

@@ -16,15 +16,15 @@ export const generateMetadata = async (props: { params: { slug: string } }): Pro
 	return {
 		title: post?.title || post?.subtitle || publication.title,
 		description: post?.seo?.description || post?.subtitle,
-		applicationName: 'Softlancer',
-		authors: [{ name: post?.author.name, url: 'https://softlancer.co/about' }],
+		applicationName: 'Sarthakjdev',
+		authors: [{ name: post?.author.name, url: 'https://sarthakjdev.com/about' }],
 		generator: 'Next.js',
 		referrer: 'origin-when-cross-origin',
-		keywords: ['softlancer', ...(post?.tags || []).map(tag => tag.name)],
-		publisher: 'Softlancer',
+		keywords: ['Sarthakjdev', ...(post?.tags || []).map(tag => tag.name)],
+		publisher: 'Sarthakjdev',
 		robots: 'index, follow',
-		creator: 'Softlancer Development Team',
-		manifest: 'https://softlancer.co/manifest.json',
+		creator: 'Sarthakjdev',
+		manifest: 'https://sarthakjdev.com/manifest.json',
 		openGraph: {
 			type: 'website',
 			url: post?.url,
@@ -32,31 +32,31 @@ export const generateMetadata = async (props: { params: { slug: string } }): Pro
 			description: post?.seo?.description || post?.subtitle || publication.title,
 			images: [
 				{
-					url: post?.ogMetaData?.image || 'https://softlancer.co/open-graph.png'
+					url: post?.ogMetaData?.image || 'https://sarthakjdev.com/open-graph.png'
 				}
 			],
-			siteName: 'Softlancer'
+			siteName: 'sarthakjdev'
 		},
 		twitter: {
 			card: 'summary_large_image',
-			site: '@Softlancerhq',
+			site: '@Sarthakjdevhq',
 			description: post?.seo?.description || post?.subtitle || undefined,
 			title: post?.title || post?.subtitle || publication.title,
-			creator: '@Softlancerhq',
-			images: post?.ogMetaData?.image || 'https://softlancer.co/twitter-og.png'
+			creator: '@Sarthakjdevhq',
+			images: post?.ogMetaData?.image || 'https://sarthakjdev.com/twitter-og.png'
 		},
-		category: 'Innovation, Product Development, Business Solutions',
+		category: 'Engineering Backend Development Software Development',
 		classification:
 			(post?.tags || []).map(tag => tag.name).join(', ') ||
-			'Softlancer - Ideate. Innovate. Elevate',
+			'Backend DevOps Software Engineer',
 		other: {
 			'X-UA-Compatible': 'IE=edge,chrome=1',
 			'mobile-web-app-capable': 'yes'
 		},
-		metadataBase: new URL('https://softlancer.co'),
+		metadataBase: new URL('https://sarthakjdev.com'),
 		icons: [
-			{ rel: 'icon', url: 'https://softlancer.co/favicon.ico' },
-			{ rel: 'apple-touch-icon', url: 'https://softlancer.co/apple-icon.png' }
+			{ rel: 'icon', url: 'https://sarthakjdev.com/favicon.ico' },
+			{ rel: 'apple-touch-icon', url: 'https://sarthakjdev.com/apple-icon.png' }
 		]
 	}
 }
