@@ -18,47 +18,47 @@ export const generateMetadata = async (props: { params: { slug: string } }): Pro
 	return {
 		title: series?.name || series.description?.text || publication.title,
 		description: series.description?.text || publication?.descriptionSEO || ProductDescription,
-		applicationName: 'Softlancer',
-		authors: [{ name: series?.author.name, url: 'https://softlancer.co/about' }],
+		applicationName: 'sarthakjdev',
+		authors: [{ name: series?.author.name, url: 'https://sarthakjdev.com/' }],
 		generator: 'Next.js',
 		referrer: 'origin-when-cross-origin',
-		keywords: ['softlancer'],
-		publisher: 'Softlancer',
+		keywords: ['sarthakjdev'],
+		publisher: 'sarthakjdev',
 		robots: 'index, follow',
-		creator: 'Softlancer Development Team',
-		manifest: 'https://softlancer.co/manifest.json',
+		creator: 'sarthakjdev Development Team',
+		manifest: 'https://sarthakjdev.com/manifest.json',
 		openGraph: {
 			type: 'website',
-			url: `https://softlancer.co/series/${series?.slug}`,
+			url: `https://sarthakjdev.com/series/${series?.slug}`,
 			title: series?.name || series.description?.text || publication.title,
 			description:
 				series.description?.text || publication?.descriptionSEO || ProductDescription,
 			images: [
 				{
-					url: series?.coverImage || 'https://softlancer.co/open-graph.png'
+					url: series?.coverImage || 'https://sarthakjdev.com/open-graph.png'
 				}
 			],
-			siteName: 'Softlancer'
+			siteName: 'sarthakjdev'
 		},
 		twitter: {
 			card: 'summary_large_image',
-			site: '@Softlancerhq',
+			site: '@sarthakjdevhq',
 			description:
 				series.description?.text || publication?.descriptionSEO || ProductDescription,
 			title: series?.name || series.description?.text || publication.title,
-			creator: '@Softlancerhq',
-			images: series?.coverImage || 'https://softlancer.co/twitter-og.png'
+			creator: '@sarthakjdevhq',
+			images: series?.coverImage || 'https://sarthakjdev.com/twitter-og.png'
 		},
 		category: 'Innovation, Product Development, Business Solutions',
-		classification: 'Softlancer - Ideate. Innovate. Elevate',
+		classification: 'sarthakjdev - Ideate. Innovate. Elevate',
 		other: {
 			'X-UA-Compatible': 'IE=edge,chrome=1',
 			'mobile-web-app-capable': 'yes'
 		},
-		metadataBase: new URL('https://softlancer.co'),
+		metadataBase: new URL('https://sarthakjdev.com'),
 		icons: [
-			{ rel: 'icon', url: 'https://softlancer.co/favicon.ico' },
-			{ rel: 'apple-touch-icon', url: 'https://softlancer.co/apple-icon.png' }
+			{ rel: 'icon', url: 'https://sarthakjdev.com/favicon.ico' },
+			{ rel: 'apple-touch-icon', url: 'https://sarthakjdev.com/apple-icon.png' }
 		]
 	}
 }
