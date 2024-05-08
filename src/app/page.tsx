@@ -8,14 +8,12 @@ export default function Home() {
 		<main>
 			{/* hero section */}
 			<div className="mx-auto flex max-w-2xl flex-col items-center justify-evenly pt-24 text-gray-800 lg:pb-5 xl:max-w-7xl xl:flex-row-reverse xl:justify-center xl:pt-24">
-				<div className="relative mb-10 flex select-none px-10 xl:mb-16">
+				<div className="relative z-10 hidden md:flex">
 					<Image
-						alt="My profile photo"
-						loading="lazy"
-						width="300"
-						height="300"
-						className="aspect-square rounded-full object-contain"
-						src={'/portfolio-image.png'}
+						src="/founder-section/founder.png"
+						alt="founder"
+						height={415}
+						width={420}
 					/>
 				</div>
 				<div className="flex flex-col text-center xl:mr-20 xl:text-left">
