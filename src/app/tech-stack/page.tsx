@@ -18,7 +18,7 @@ const TechStackSection = () => {
 					</p>
 				</div>
 
-				<div className="grid-rows-7 relative mx-auto mt-16 grid max-w-xl grid-cols-3 gap-10 sm:grid-cols-4 md:grid-cols-5">
+				<div className="relative mx-auto mt-16 grid max-w-xl grid-cols-3 grid-rows-7 gap-10 sm:grid-cols-4 md:grid-cols-5">
 					{techStacks.map(item => {
 						return (
 							<div className="relative h-full w-full cursor-pointer" key={item.name}>
