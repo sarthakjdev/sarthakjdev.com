@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import Blogs from '~/components/blogs'
+import Link from 'next/link'
 
 export default function Home() {
 	return (
@@ -24,8 +25,18 @@ export default function Home() {
 						</h2>
 					</div>
 					<p className="font-content mb-8 max-w-2xl whitespace-break-spaces text-lg font-semibold text-gray-600 lg:leading-relaxed">
-						Backend Engineer & DevOps Enthusiast bridging code & infrastructure.
-						Building ideas into technical reality
+						Building{' '}
+						<Link
+							href={'https://softlancer.co'}
+							target="_blank"
+							className="cursor-pointer text-orange-500"
+						>
+							Softlancer
+						</Link>{' '}
+						&{' '}
+						<Link href={'https://wapikit.com'} target="_blank" className='cursor-pointer text-[#25D366]'>
+							WapiKit
+						</Link>
 					</p>
 				</div>
 			</div>

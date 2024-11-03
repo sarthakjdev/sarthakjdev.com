@@ -131,7 +131,7 @@ const Header = () => {
 								</>
 							)}
 						</Popover>
-						<Link href={'https://call.sarthakjdev.com'}>
+						<Link href={'https://softlancer.co/contact'}>
 							<Button>Hire for work</Button>
 						</Link>
 					</div>
