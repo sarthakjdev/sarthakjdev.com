@@ -1,11 +1,10 @@
 import { type MetadataRoute } from 'next'
-import { siteDescription } from '~/constant'
 
 export default function manifest(): MetadataRoute.Manifest {
 	return {
 		name: 'Sarthakjdev',
 		short_name: 'sarthakjdev',
-		description: siteDescription,
+		description: 'Entrepreneur building AI-native systems that talk and think like humans.',
 		start_url: '/',
 		display: 'standalone',
 		background_color: '#fff',

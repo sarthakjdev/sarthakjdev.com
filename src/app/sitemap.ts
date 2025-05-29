@@ -9,10 +9,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
 			priority: 1
 		},
 		{
-			url: 'https://sarthakjdev.com/tech-stack',
+			url: 'https://sarthakjdev.com/about',
 			lastModified: new Date(),
 			changeFrequency: 'monthly',
-			priority: 0.5
-		}
+			priority: 1
+		},
+		{
+			url: 'https://sarthakjdev.com/writings',
+			lastModified: new Date(),
+			changeFrequency: 'monthly',
+			priority: 1
+		},
+		{
+			url: 'https://sarthakjdev.com/now',
+			lastModified: new Date(),
+			changeFrequency: 'monthly',
+			priority: 1
+		},
 	]
 }
