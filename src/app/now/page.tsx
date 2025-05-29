@@ -17,6 +17,17 @@ export default function Now() {
 				<br />– Talking to founders, early believers, and future collaborators
 				<br />– Avoiding noise. Optimizing for long-term clarity and trust
 			</p>
+
+			<hr style={{ margin: '2rem 0' }} />
+
+			<blockquote style={{ fontStyle: 'italic', opacity: 0.7 }}>
+				It takes time, not idle time, to build something meaningful.
+			</blockquote>
+
+			<blockquote style={{ fontStyle: 'italic', opacity: 0.7, marginTop: '1rem' }}>
+				Waiting is not working. Most progress comes when you're actively shaping the
+				problem.
+			</blockquote>
 		</main>
 	)
 }
