@@ -2,72 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-	--foreground-rgb: 0, 0, 0;
-	--background-start-rgb: 214, 219, 220;
-	--background-end-rgb: 255, 255, 255;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.6;
 }
 
-@media (prefers-color-scheme: dark) {
-	:root {
-		--foreground-rgb: 255, 255, 255;
-		--background-start-rgb: 0, 0, 0;
-		--background-end-rgb: 0, 0, 0;
-	}
+/* Ensure clean typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
 }
 
-.mansoryItemStyle:before {
-	content: '';
-	background: radial-gradient(
-		circle at center center,
-		white 10%,
-		whitesmoke 11%,
-		whitesmoke 100%
-	);
-}
-.mansoryItemStyle:after {
-	content: '';
-	/* background: linear-gradient(
-  191deg,
-  rgba(0, 0, 0, 0.1) 20%,
-  rgba(0, 0, 0, 0.76) 100%
-); */
-	background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 10%, rgb(0 0 0 / 78%) 80%);
-}
-@media (max-width: 585px) {
-	.mansoryItemStyle:after {
-		opacity: 1 !important;
-	}
-	div.content__slate {
-		z-index: 999 !important;
-		transform: none !important;
-		opacity: 1 !important;
-	}
+/* Clean link styling */
+a {
+  transition: none;
 }
 
-@media (max-width: 989px) {
-	.mansoryItemStyle:after {
-		opacity: 1 !important;
-	}
-	div.content__slate {
-		z-index: 999 !important;
-		transform: none !important;
-		opacity: 1 !important;
-	}
+/* Remove any default margins */
+* {
+  margin: 0;
+  padding: 0;
 }
 
-@media (max-width: 220px) {
-	.mansoryItemStyle:after {
-		opacity: 1 !important;
-	}
-	div.content__slate {
-		z-index: 999 !important;
-		transform: none !important;
-		opacity: 1 !important;
-	}
-}
-@media (max-width: 758px) {
-	.mansoryItemStyle {
-		padding: 1.4rem 1rem;
-	}
+/* Ensure proper text rendering */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

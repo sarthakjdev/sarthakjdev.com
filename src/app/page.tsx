@@ -1,51 +1,60 @@
-'use client'
-
-import Image from 'next/image'
-import Blogs from '~/components/blogs'
 import Link from 'next/link'
 
-export default function Home() {
+export default function HomePage() {
 	return (
-		<main>
-			{/* hero section */}
-			<div className="mx-auto flex max-w-2xl flex-col items-center justify-evenly pt-24 text-gray-800 lg:pb-5 xl:max-w-7xl xl:flex-row-reverse xl:justify-center xl:pt-24">
-				<div className="relative z-10 hidden md:flex">
-					<Image
-						src="/founder-section/founder.png"
-						alt="founder"
-						height={415}
-						width={420}
-					/>
-				</div>
-				<div className="flex flex-col text-center xl:mr-20 xl:text-left">
-					<div className="mb-2">
-						<h1 className="mb-2 text-4xl font-bold md:text-5xl ">Sarthak Jain</h1>
-						<h2 className="mb-4 text-xl font-semibold">
-							Software Engineer with Backend and DevOps Focus
-						</h2>
-					</div>
-					<p className="font-content mb-8 max-w-2xl whitespace-break-spaces text-lg font-semibold text-gray-600 lg:leading-relaxed">
-						Building{' '}
-						<Link
-							href={'https://softlancer.co'}
-							target="_blank"
-							className="cursor-pointer text-orange-500"
-						>
-							Softlancer
-						</Link>{' '}
-						&{' '}
-						<Link href={'https://wapikit.com'} target="_blank" className='cursor-pointer text-[#25D366]'>
-							WapiKit
+		<main className="mx-auto max-w-2xl px-6 py-16">
+			<h1 className="mb-8 text-4xl font-normal text-gray-900">Sarthak Jain</h1>
+
+			<div className="space-y-6 text-lg leading-relaxed text-gray-800">
+				<p>Entrepreneur building AI-native systems that think and talk like humans.</p>
+
+				<p>
+					Founder of{' '}
+					<a
+						href="https://wapikit.com"
+						className="text-gray-900 underline hover:no-underline"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						WapiKit
+					</a>{' '}
+					— a conversation automation platform rethinking how brands talk to customers.
+					<br />
+					Also run{' '}
+					<a
+						href="https://softlancer.co"
+						className="text-gray-900 underline hover:no-underline"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						Softlancer
+					</a>{' '}
+					— a quiet partner studio for early-stage founders.
+				</p>
+
+				<p>Writing about product clarity, startup execution, and AI with a soul.</p>
+
+				<div className="space-y-2 pt-4">
+					<div>
+						<Link href="/about" className="text-gray-900 underline hover:no-underline">
+							→ About
 						</Link>
-					</p>
+					</div>
+					<div>
+						<Link
+							href="/writings"
+							className="text-gray-900 underline hover:no-underline"
+						>
+							→ Writings
+						</Link>
+					</div>
+					<div>
+						<Link href="/now" className="text-gray-900 underline hover:no-underline">
+							→ Now
+						</Link>
+					</div>
 				</div>
 			</div>
-
-			{/* Works and products developed */}
-			{/* <Works /> */}
-
-			{/* blogs */}
-			<Blogs />
 		</main>
 	)
 }
